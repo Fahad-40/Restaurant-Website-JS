@@ -50,7 +50,7 @@ function RenderItems() {
     <a class="back-to-top" href="#starters">↑ Back to top</a>
   `;
 
-// =========== FOR ADD TO CART
+    // =========== FOR ADD TO CART
     document.querySelectorAll('.dish-add-btn').forEach(button => {
 
         button.addEventListener('click', () => {
@@ -65,7 +65,47 @@ function RenderItems() {
 
     })
 
-// =========== finding item
+    // =========== finding item
+    function findItem(itemId) {
+
+        for (let category of menuData) {
+
+            for (let item of category.items) {
+
+                let ItemName = item.name.toLocaleUpperCase().replace(/ /g, "-");
+
+                if (ItemName === itemId) {
+                    return item;
+                }
+
+            }
+
+        }
+
+    }
+
+    // Add to cart function
+
+    function AddToCart(item) {
+        let cart = [];
+
+        let checkExistingItem = cart.find(cartItem => cartItem.name === item.name);
+
+        if (checkExistingItem) {
+            item.quantity += 1;
+        }
+        else {
+            cart.push(
+                {
+                    name: item.name,
+                    price: item.price,
+                    img: item.img,
+                    quantity: item.quantity
+                }
+            )
+        }
+
+    }
 
 
 

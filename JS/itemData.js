@@ -17,7 +17,8 @@ const menuData = [
                 {
                     text: "Chef's Pick", type: "badge-chef"
                 },
-                img: "Assets/Images/Menu/menu-recipe1.png"
+                img: "Assets/Images/Menu/menu-recipe1.png",
+                 quantity: 1
             },
 
             // item 2
@@ -28,7 +29,8 @@ const menuData = [
                 badge: {
                     text: "Vegetarian", type: "badge-veg"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             },
 
             // item 3
@@ -40,7 +42,8 @@ const menuData = [
                 badge: {
                     text: "Seasonal", type: "badge-chef"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             }
 
         ]
@@ -65,7 +68,8 @@ const menuData = [
                 badge: {
                     text: "Signature", type: "badge-chef"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             },
 
             // item 2
@@ -77,7 +81,8 @@ const menuData = [
                 badge: {
                     text: "Elite", type: "badge-veg"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             },
 
             //item 3
@@ -86,7 +91,8 @@ const menuData = [
                 price: "£55",
                 desc: "Rich forest mushroom blend with a touch of truffle and garlic croutons",
                 badge: { text: "Classic", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             }
 
 
@@ -112,7 +118,8 @@ const menuData = [
                 badge: {
                     text: "Best Seller", type: "badge-popular"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             },
 
             // item 2
@@ -123,7 +130,8 @@ const menuData = [
                 badge: {
                     text: "Best Seller", type: "badge-popular"
                 },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             },
 
             // item 3
@@ -132,7 +140,8 @@ const menuData = [
                 price: "£210",
                 desc: "Tender lamb shank served with fragrant saffron-infused basmati rice",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png"
+                img: "Assets/Images/Home/recipe2.png",
+                 quantity: 1
             }
 
 
