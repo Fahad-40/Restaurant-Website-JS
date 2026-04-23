@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu — Zafran</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols for the Shopping Bag Icon -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/menu.css">
+
+</head>
+
+<body>
+
+
+    <!-- ═══════════════ HEADER ═══════════════ -->
+    <header class="site-header">
+        <div class="logo">The Bespoke Gastronomy</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="reservation.html"><button class="btn-gold">Book a Table</button></a>
+    </header>
+
+
+    <!-- ═══════════════ STANDALONE FIXED BASKET ICON ═══════════════ -->
+    <button aria-label="View shopping bag" class="basket-trigger-fixed" id="cart-trigger">
+        <span class="material-symbols-outlined" style="font-size: 26px;">shopping_bag</span>
+        <span class="basket-count">2</span>
+    </button>
+    <!-- ═══════════════ SIDE CART DRAWER ═══════════════ -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="cart-close" id="cart-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="cart-body">
+            <!-- Empty State (hidden by default) -->
+            <div class="cart-empty" id="cart-empty">
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <p>Your selection is currently empty</p>
+            </div>
+            <!-- Sample Items -->
+            <div id="cart-items-container">
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img alt="Wagyu Beef Tartare" src="Assets/Images/Home/recipe2.png" />
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Wagyu Beef Tartare</h3>
+                        <p class="cart-item-price">AED 120</p>
+                        <div class="cart-item-controls">
+                            <div class="qty-selector">
+                                <button class="qty-btn">−</button>
+                                <span class="qty-val">1</span>
+                                <button class="qty-btn">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img alt="Lobster Bisque"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjxOsmGLDnRQhyNtQVLCIsPngNLvMdwlILNcCjsz0YpNQQbYXLMots0IwtEA7lct4gtVtI-dJx-8Dmt9oW7tJiEfMDnJ9iDTcPrGQRW_YHecrWK9u9nj6OKXmQ4YySi7d4xuVQ82I9CTO4dZrUdNc6-fmMUM8NGrCjB_GGF5TdndU3optVd7YeYFzzRjsAqC01KqsX3oXtHJAP4spI7Ab4-kT5QoZaTFsKGHsE1gXHa1FK76eQOiHu0qnXM2VYgPA3cHY_IV_wXSk" />
+                    </div>
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-name">Lobster Bisque</h3>
+                        <p class="cart-item-price">AED 95</p>
+                        <div class="cart-item-controls">
+                            <div class="qty-selector">
+                                <button class="qty-btn">−</button>
+                                <span class="qty-val">2</span>
+                                <button class="qty-btn">+</button>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <button class="review-btn"><a href="checkout.html"> Review Selection →</a> </button>
+        </div>
+    </aside>
+    <!-- ═══════════════ MENU PAGE ═══════════════ -->
+    <div class="menu-page">
+        <aside class="sidebar">
+            <div class="sidebar-search">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+                </svg>
+                <input id="menu-search" placeholder="Search menu…" type="text" />
+            </div>
+            <ul class="sidebar-nav" id="sidebar-nav">
+                <li><a data-target="starters" href="#starters">Starters <span class="cat-count">4</span></a></li>
+                <li><a data-target="salads" href="#salads">Soups &amp; Salads <span class="cat-count">3</span></a></li>
+                <li><a data-target="mains" href="#mains">Main Course <span class="cat-count">4</span></a></li>
+                <li><a data-target="grills" href="#grills">Grills &amp; BBQ <span class="cat-count">3</span></a></li>
+                <div class="sidebar-divider"></div>
+                <li><a data-target="sides" href="#sides">Sides <span class="cat-count">2</span></a></li>
+                <li><a data-target="specials" href="#specials">Specials <span class="cat-count">2</span></a></li>
+                <li><a data-target="desserts" href="#desserts">Desserts <span class="cat-count">3</span></a></li>
+                <li><a data-target="beverages" href="#beverages">Beverages <span class="cat-count">3</span></a></li>
+            </ul>
+        </aside>
+
+
+        <main class="menu-content">
+            <h1 class="menu-page-title">Our Menu</h1>
+            <p class="menu-page-sub">Crafted with passion · Served with elegance</p>
+
+            <!-- STARTERS -->
+        
+            <!-- SOUPS & SALADS -->
+          
+            <!-- MAIN COURSE -->
+   
+            
+        </main>
+    </div>
+
+
+<script src="JS/itemData.js"></script>
+<script src="JS/renderItems.js"></script>
+
+    <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+    <script>
+        // --- Cart Drawer Toggle ---
+        const cartTrigger = document.getElementById('cart-trigger');
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartOverlay = document.getElementById('cart-overlay');
+        const cartClose = document.getElementById('cart-close');
+
+        function toggleCart() {
+            cartDrawer.classList.toggle('active');
+            cartOverlay.classList.toggle('active');
+            document.body.style.overflow = cartDrawer.classList.contains('active') ? 'hidden' : '';
+        }
+
+        cartTrigger.addEventListener('click', toggleCart);
+        cartClose.addEventListener('click', toggleCart);
+        cartOverlay.addEventListener('click', toggleCart);
+
+        // --- Scroll Spy & Sidebar Logic ---
+       
+
+        // --- Search Logic ---
+        const searchInput = document.getElementById('menu-search');
+        searchInput.addEventListener('input', () => {
+            const q = searchInput.value.trim().toLowerCase();
+            sections.forEach(sec => {
+                let anyVisible = false;
+                sec.querySelectorAll('.dish-card').forEach(card => {
+                    const text = card.innerText.toLowerCase();
+                    const show = !q || text.includes(q);
+                    card.style.display = show ? 'flex' : 'none';
+                    if (show) anyVisible = true;
+                });
+                sec.style.display = anyVisible ? 'block' : 'none';
+            });
+        });
+    </script>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Reservations - The Bespoke Gastronomy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/reservation.css">
+
+</head>
+
+<body>
+    <!-- <nav class="navbar">
+        <a class="brand-logo" href="#">The Bespoke Gastronomy</a>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link active" href="reservation.html">Reservations</a>
+            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link" href="events.html">Events</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+          <button class="btn-gold">Book a Table</button>
+    </nav> -->
+
+
+    <header class="site-header">
+        <div class="logo">The Bespoke Gastronomy</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a class="active" href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn-gold">Book a Table</button>
+    </header>
+
+
+
+    <main>
+        <header class="page-header">
+            <h1 class="page-title">Secure Your Table</h1>
+            <p class="page-description">
+                Indulge in an evening of refined elegance and exquisite flavors. Your journey into the heart of bespoke
+                gastronomy begins here.
+            </p>
+        </header>
+        <section class="reservation-grid">
+            <!-- Imagery -->
+            <div class="imagery-column">
+                <div class="sticky-wrapper">
+                    <div class="main-image-container">
+                        <img alt="Fine dining atmosphere with candlelight"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGUwb4DlzLBbtENR14XYVniheSedMyClba7PPOmUpWffhQGgskVjqSLGudUHEuV6OpWYuHS9oseF2VrtJQev6md7Z0n-u1KXSox8S2IGK3FGzCHB2DAA-B_mMCR9JI7aLk4WdSDOh-p2T_tdU8e9x3ia09Dv23ufJuB4EqsD4xRomRwKLqRohNNX0ryjx-Tr1QeSLatmSv6nBJKSKsyAFPS5Ecoovmiy_AyIr_Ci5ypE4Jat-rASJ1boIccZ1Cli8oNJ87iTgSdFI" />
+                    </div>
+                    <div class="experience-card">
+                        <span class="experience-title">The Experience</span>
+                        <p class="experience-text">
+                            A curated symphony of taste, sound, and atmosphere tailored to your discerning palate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Booking Interface -->
+            <div class="form-column">
+                <div class="form-container">
+                    <h2 class="section-title">Reservation Details</h2>
+                    <form class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Select Date</label>
+                                <input type="date" value="2024-12-14" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Preferred Time</label>
+                                <select>
+                                    <option>18:00 — Sunset Seating</option>
+                                    <option selected="">19:30 — Prime Gala</option>
+                                    <option>21:00 — Late Night Affair</option>
+                                    <option>22:30 — The Silent Hour</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Guest Count</label>
+                                <select>
+                                    <option selected="">2 Guests</option>
+                                    <option>4 Guests</option>
+                                    <option>6 Guests</option>
+                                    <option>8+ Private Room</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Special Occasion</label>
+                                <select>
+                                    <option selected="">None / Just Dining</option>
+                                    <option>Anniversary</option>
+                                    <option>Birthday Celebration</option>
+                                    <option>Business Engagement</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Additional Notes &amp; Dietary Requirements</label>
+                            <textarea placeholder="Tell us about allergies or special seating requests..."
+                                rows="3"></textarea>
+                        </div>
+                        <a class="btn-gold submit-btn" href="reservation_success.html">Complete Reservation
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                           </a>
+
+                    </form>
+                </div>
+                <div class="summary-container">
+                    <h3 class="summary-title">Booking Summary</h3>
+                    <div class="summary-list">
+                        <div class="summary-item">
+                            <span class="summary-label">Scheduled For</span>
+                            <span class="summary-value">December 14, 2024</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Arrival At</span>
+                            <span class="summary-value">19:30 — Prime Gala</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Party Size</span>
+                            <span class="summary-value">2 Discerning Guests</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Experience Fee</span>
+                            <span class="summary-value neutral">No deposit required</span>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <span class="material-symbols-outlined info-icon">info</span>
+                        <p>Reservations are held for 15 minutes. We request formal evening attire for the Main Dining
+                            Room.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-brand">
+            <div class="footer-logo">The Bespoke Gastronomy</div>
+            <p class="footer-mission">
+                Elevating the art of the meal through precise execution and sensory immersion.
+            </p>
+        </div>
+        <div class="footer-links-group">
+            <div class="footer-column">
+                <span class="footer-heading">Connect</span>
+                <a class="footer-link" href="#">Instagram</a>
+                <a class="footer-link" href="#">Facebook</a>
+            </div>
+            <div class="footer-column">
+                <span class="footer-heading">Legal</span>
+                <a class="footer-link" href="#">Privacy Policy</a>
+                <a class="footer-link" href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 The Bespoke Gastronomy. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

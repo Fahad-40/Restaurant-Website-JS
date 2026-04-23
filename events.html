@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #f1c97d;
+            --primary-container: #d4ad65;
+            --on-primary: #412d00;
+            --background: #131313;
+            --surface: #131313;
+            --surface-container: #201f1f;
+            --surface-container-high: #2a2a2a;
+            --surface-container-low: #1c1b1b;
+            --on-surface: #e5e2e1;
+            --on-surface-variant: #d0c5af;
+            --outline: #99907c;
+            --outline-variant: #4d4635;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--on-surface);
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .serif {
+            font-family: 'Noto Serif', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: rgba(19, 19, 19, 0.6);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-family: 'Noto Serif', serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            font-family: 'Noto Serif', serif;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.25rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, var(--primary), var(--primary-container));
+            color: var(--on-primary);
+            padding: 0.5rem 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            border: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            opacity: 0.8;
+        }
+
+
+
+
+
+
+
+
+
+  /* ── ROOT VARIABLES ── */
+        :root {
+            --color-bg: #131313;
+            --color-surface: #201f1f;
+            --color-surface-high: #353534;
+            --color-primary: #f1c97d;
+            --color-primary-dark: #d4ad65;
+            --color-text: #e5e2e1;
+            --color-text-muted: #d0c5af;
+            --font-headline: 'Noto Serif', serif;
+            --font-body: 'Manrope', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --sidebar-width: 230px;
+            --navbar-height: 80px;
+            --drawer-width: 35%;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* ================ */
+
+        /* Base Reset & Variables */
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-headline);
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        /* Layout Helpers */
+        .container-padding {
+            padding-left: 6rem;
+            padding-right: 6rem;
+        }
+
+        @media (max-width: 768px) {
+            .container-padding {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        /* Components */
+        .btn-gold {
+            background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+            color: #412d00;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 1rem 2.5rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-gold:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(241, 201, 125, 0.4);
+            color: var(--color-primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 1rem 2.5rem;
+            font-size: 0.8rem;
+        }
+
+        .btn-outline:hover {
+            background: rgba(241, 201, 125, 0.1);
+        }
+
+        .section-tag {
+            display: block;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            font-size: 0.7rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Header - Fixed to Top */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 6rem;
+            background: rgba(19, 19, 19, 0.85);
+            /* Slightly darker for better visibility */
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(241, 201, 125, 0.1);
+        }
+
+        .logo {
+            font-family: var(--font-headline);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            letter-spacing: -0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-family: var(--font-headline);
+            text-transform: uppercase;
+            font-size: 0.80rem;
+            letter-spacing: 0.1em;
+            color: var(--color-text);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--color-primary);
+        }
+
+        .nav-links a.active {
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .site-header {
+                padding: 1.25rem 1.5rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Main Content */
+        main {
+            padding-top: 8rem;
+        }
+
+        .header-section {
+            max-width: 56rem;
+            margin: 0 auto 6rem;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        .main-title {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .main-title {
+                font-size: 4.5rem;
+            }
+        }
+
+        .subtitle {
+            color: var(--on-surface-variant);
+            font-size: 1.125rem;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        /* Feature Sections */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 8rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .feature-grid {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+
+        .feature-card {
+            background-color: var(--surface-container-high);
+            padding: 3rem;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .feature-grid-reverse .feature-image-container {
+            grid-column: 2 / span 6;
+            order: 2;
+        }
+
+        @media (min-width: 768px) {
+            .feature-grid-reverse .feature-image-container {
+                order: 1;
+            }
+
+            .feature-grid-reverse .feature-content-container {
+                grid-column: 7 / span 5;
+                order: 2;
+                margin-left: -6rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .feature-content-container {
+            grid-column: 2 / span 5;
+        }
+
+        .feature-image-container {
+            grid-column: 6 / span 6;
+            height: 600px;
+            margin-top: -3rem;
+        }
+
+        @media (min-width: 768px) {
+            .feature-image-container {
+                margin-top: 0;
+            }
+        }
+
+        .label-accent {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--primary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-description {
+            color: var(--on-surface-variant);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .feature-meta {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--outline);
+        }
+
+        .meta-value {
+            font-size: 1.125rem;
+            font-family: 'Noto Serif', serif;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(241, 201, 125, 0.4);
+            color: var(--primary);
+            padding: 0.75rem 2rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(241, 201, 125, 0.1);
+        }
+
+        .full-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Culinary Section */
+        .culinary-section {
+            background-color: var(--surface-container-low);
+            padding: 8rem 0;
+            margin-bottom: 8rem;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .culinary-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .culinary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .culinary-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .culinary-text {
+            color: var(--on-surface-variant);
+            font-size: 1.125rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-icon {
+            color: var(--primary);
+        }
+
+        .service-name {
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+        }
+
+        .service-desc {
+            font-size: 0.875rem;
+            color: var(--on-surface-variant);
+        }
+
+        .culinary-image-wrapper {
+            position: relative;
+        }
+
+        .culinary-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: -1rem;
+            border: 1px solid rgba(77, 70, 53, 0.2);
+            z-index: -1;
+            transform: translate(2rem, 2rem);
+            transition: transform 0.3s ease;
+        }
+
+        .culinary-image-wrapper:hover::after {
+            transform: translate(1rem, 1rem);
+        }
+
+        .culinary-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Inquiry Form Section */
+        .inquiry-section {
+            margin-bottom: 8rem;
+        }
+
+        .inquiry-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        @media (min-width: 768px) {
+            .inquiry-flex {
+                flex-direction: row;
+            }
+        }
+
+        .inquiry-info {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .inquiry-info {
+                width: 33.333%;
+            }
+        }
+
+        .form-container {
+            width: 100%;
+            background-color: var(--surface-container);
+            padding: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-container {
+                width: 66.666%;
+            }
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--outline);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--outline);
+            padding: 0.5rem 0;
+            color: var(--on-surface);
+            font-family: 'Manrope', sans-serif;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .form-input::placeholder,
+        .form-textarea::placeholder {
+            color: rgba(208, 197, 175, 0.3);
+            text-transform: uppercase;
+        }
+
+        .form-textarea {
+            resize: none;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .btn-submit {
+            width: 100%;
+            margin-top: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--primary-container));
+            color: var(--on-primary);
+            padding: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            margin-bottom: 8rem;
+        }
+
+        .gallery-header {
+            padding: 0 3rem;
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .view-all {
+            color: var(--primary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.25rem;
+        }
+
+        .gallery-scroller {
+            display: flex;
+            gap: 2rem;
+            overflow: hidden;
+            padding-left: 15%;
+        }
+
+        .gallery-item {
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+            filter: grayscale(100%);
+            transition: all 0.7s ease;
+        }
+
+        .gallery-item:hover {
+            filter: grayscale(0);
+        }
+
+        .gallery-item-md {
+            min-width: 400px;
+            height: 500px;
+        }
+
+        .gallery-item-sm {
+            min-width: 300px;
+            height: 500px;
+            margin-top: 3rem;
+        }
+
+        .gallery-item-lg {
+            min-width: 500px;
+            height: 500px;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 100;
+        }
+
+        .gallery-tag {
+            color: var(--primary);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 5rem 3rem;
+            background-color: var(--background);
+            border-top: 1px solid rgba(77, 70, 53, 0.15);
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: 'Noto Serif', serif;
+            font-size: 1.125rem;
+            color: var(--primary);
+        }
+
+        .footer-tagline {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--on-surface-variant);
+            max-width: 20rem;
+            line-height: 1.6;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-nav {
+                flex-direction: row;
+            }
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-label {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4em;
+            color: var(--outline);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--on-surface-variant);
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .footer-link.underline {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        .copyright {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--outline-variant);
+            margin-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .copyright {
+                margin-top: 0;
+            }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav class="navbar">
+        <div class="nav-logo">The Bespoke Gastronomy</div>
+        <div class="nav-links">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="menu.html">Menu</a>
+            <a class="nav-link" href="reservation.html">Reservations</a>
+            <a class="nav-link" href="gallery.html">Gallery</a>
+            <a class="nav-link active" href="events.html">Events</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+        </div>
+        <button class="btn-primary">Book a Table</button>
+    </nav> -->
+
+
+    <header class="site-header">
+        <div class="logo">The Bespoke Gastronomy</div>
+        <nav class="nav-links">
+            <a  href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="gallery.html">Gallery</a>
+            <a class="active" href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn-gold">Book a Table</button>
+    </header>
+
+    
+    <main>
+        <header class="header-section">
+            <h1 class="main-title">Exquisite Private Gatherings.</h1>
+            <p class="subtitle">From intimate celebrations to grand events, we craft unforgettable experiences.</p>
+        </header>
+        <section class="feature-grid">
+            <div class="feature-content-container" style="grid-column: 2 / span 5; z-index: 10;">
+                <div class="feature-card">
+                    <span class="label-accent">The Subterranean Haven</span>
+                    <h2 class="feature-title">The Wine Cellar</h2>
+                    <p class="feature-description">Descend into an atmosphere of quiet prestige. Surrounded by our
+                        curated vintage collection, the cellar provides a cool, candlelit sanctuary for intimate dinners
+                        and serious tastings.</p>
+                    <div class="feature-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Capacity</span>
+                            <span class="meta-value">14 Guests</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Setting</span>
+                            <span class="meta-value">Seated Dining</span>
+                        </div>
+                    </div>
+                    <button class="btn-outline">Request Space</button>
+                </div>
+            </div>
+            <div class="feature-image-container" style="grid-column: 6 / span 6;">
+                <img alt="Intimate wine cellar" class="full-image"
+                    data-alt="luxury underground wine cellar with dark wood racks, long wooden table, dim candle lighting and rows of wine bottles in shadows"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhlYs4ItmDHnkD8QsOYEl9VChNeZ65xfqQUOM8mliWf8C9omb63b7Wu1m3iFz62Uqcs37BuSJQtHWCnSGIyE1w3wLB998nEDMnXT3PIS36v8aXz0xW2s5_Tq6t1TnhxwcW3sPk-nA7doqWY8EGmbeGXKyLx2z8eEPk3KZEaZMay3vt83uyvnwjlEOhIG1wWxiN5lDUIWQNqO2keIyihqGDVXp59LgAB1YQ70MNrhaiOvwSnSV8qkt6WM4WCq5SqYRkbj1bPTKcKTw" />
+            </div>
+        </section>
+        <section class="feature-grid feature-grid-reverse">
+            <div class="feature-image-container">
+                <img alt="Elegant outdoor terrace" class="full-image"
+                    data-alt="spacious outdoor restaurant terrace at twilight with glowing string lights, white linen tables, and lush greenery in a high-end setting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA38sGGxQdT7HHjqC_-CODKTTnF6gggc-9PNfPcwljYLgs_X-I3H-xNaQrPpdRPjo6_D5y9_W4v-7bhbIuqIbVjeDqTJe3l2IKfWhUYoGRaL_zUsmykjzZ8s9R1jQyMH4PdVJRgpA4uGuagU4nI2xG8mahAttsAc2zr9EShGkwmvVIO1cLW7iUw-d29T0U6BNDY9yAKPo0qDkpW3lJ5e2DyPoqJWLG2uQIRfagCANLB8U6_AsKt5i0nPTOIZwjiwycKSC92qsd7ps" />
+            </div>
+            <div class="feature-content-container">
+                <div class="feature-card">
+                    <span class="label-accent">Al Fresco Excellence</span>
+                    <h2 class="feature-title">The Terrace</h2>
+                    <p class="feature-description">A sophisticated open-air environment with sweeping city views. Ideal
+                        for cocktail receptions and summer galas, featuring modular lounge seating and private bar
+                        service.</p>
+                    <div class="feature-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Capacity</span>
+                            <span class="meta-value">60 Guests</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Setting</span>
+                            <span class="meta-value">Reception / Lounge</span>
+                        </div>
+                    </div>
+                    <button class="btn-outline">Request Space</button>
+                </div>
+            </div>
+        </section>
+        <section class="culinary-section">
+            <div class="container culinary-grid">
+                <div>
+                    <h2 class="culinary-title">Bespoke Culinary <br />Design</h2>
+                    <p class="culinary-text">Our Executive Chef collaborates with you to construct a menu that reflects
+                        the soul of your event. From five-course dégustations to curated hors d'oeuvres, every dish is
+                        an original composition.</p>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <span class="material-symbols-outlined service-icon">restaurant_menu</span>
+                            <div>
+                                <h4 class="service-name">Personalized Tastings</h4>
+                                <p class="service-desc">Review and refine your menu with our culinary leads.</p>
+                            </div>
+                        </li>
+                        <li class="service-item">
+                            <span class="material-symbols-outlined service-icon">wine_bar</span>
+                            <div>
+                                <h4 class="service-name">Sommelier Pairings</h4>
+                                <p class="service-desc">Rare vintages and signature cocktails selected for your guests.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="culinary-image-wrapper">
+                    <img alt="Chef plating a dish" class="culinary-img"
+                        data-alt="professional chef hands meticulously plating a gourmet seafood dish with tweezers in a dark moodily lit kitchen"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUmizoypaqjo68EhKHdR65AqwKmAlt0uYuWwzlM9wJdu_0_MDZLa_xjRXbgGRRy2IYAMH34ycXyIvNro-VUwgBBdVQEyxuDQhAuK0t6EOqCdYikbOyOEXFN4HoR1HddJlE8OHNsAYxfq_F1GmgPMKP_Ls0p1o_LKiYPFFZMXTQWibgCbDXH34Rm3sxNkJc70QaNkUrAybeNjeMB1Ao2Ep_9PHkf00MV81MKZkufuGfkDoAX5pVhki-NE5ueB_tteqUlGWS07nKlCI" />
+                </div>
+            </div>
+        </section>
+        <section class="container inquiry-section">
+            <div class="inquiry-flex">
+                <div class="inquiry-info">
+                    <h2 class="feature-title" style="font-size: 2.5rem; font-weight: 700;">Inquire with the Maître D'
+                    </h2>
+                    <p class="feature-description">Allow us to orchestrate your next significant moment. Please provide
+                        your event details, and our specialist will reach out within 24 hours.</p>
+                </div>
+                <div class="form-container">
+                    <form class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input class="form-input" placeholder="ALEXANDER VANCE" type="text" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input class="form-input" placeholder="AV@EXAMPLE.COM" type="email" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input class="form-input" placeholder="+1 (555) 000-0000" type="tel" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date of Interest</label>
+                            <input class="form-input" type="date" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Guest Count</label>
+                            <input class="form-input" placeholder="10" type="number" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Event Type</label>
+                            <select class="form-select">
+                                <option style="background:#201f1f;">Corporate Engagement</option>
+                                <option style="background:#201f1f;">Anniversary Celebration</option>
+                                <option style="background:#201f1f;">Wedding Reception</option>
+                                <option style="background:#201f1f;">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label">Additional Details</label>
+                            <textarea class="form-textarea" placeholder="DESCRIBE YOUR VISION..." rows="3"></textarea>
+                        </div>
+                        <div class="full-width">
+                            <button class="btn-submit" type="submit">Send Inquiry</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="gallery-section">
+            <div class="gallery-header">
+                <div>
+                    <span class="label-accent">Archive</span>
+                    <h2 class="feature-title" style="font-weight: 700; margin-bottom: 0;">Moments Captured</h2>
+                </div>
+                <a class="view-all" href="#">View Full Gallery</a>
+            </div>
+            <div class="gallery-scroller">
+                <div class="gallery-item gallery-item-md">
+                    <img alt="Gala Event" class="full-image"
+                        data-alt="luxury corporate gala with formal dining tables, sophisticated lighting, and guests in evening wear"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABAEJCGnmOzDF8YkihWSwkoIo2mu3S8UgD3-RWoHyMiOqRziHPxQMUgWAnzQN7yZ0nq0qJEysPJ2v9pJz-xr1oujpSUAXm6zLdhX9AF-6-EGrIujEwiTyuApwIPeCy5of-SwD9HqSw6CKn4ANgt5GIoyRQ8R9SjJTcp_8KHlRefwKHT1r0c0MN2OFXGhsXj2uQuE-uwtkQuaK40OSeSgdsR8j_koqIVWEY5EuNgrU6MFfqZ-ThKDETBKNBPuw_GkhFH8tqhn6fpgc" />
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Annual Gala 2023</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-sm">
+                    <img alt="Champagne Toast" class="full-image"
+                        data-alt="close-up of crystal champagne glasses being raised in a toast at a high-end celebration"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJx6EFXzR2amIPI_QspSR5Zw-_MUqrOaYOztByZkXb9NwXSUBDn3Xq4UcPKruLEP2rMe8j84r8m6JxOfVxdiTwfoRx7syn-_5zHk11wANCOMlmx5TyJkSonS2fXfc3mXqOWNvwtlL6RTUq6M4lXO83sseLQyUmY6PoIRojEmdIIPgrsa3L4oNIUxc5Yk07oXQxSOkhzKlcij8-qYMqX7ZXhs--g0pwZhvMvg05T-G9wN72OPpPBrEc_vpDHf2qAsfbpGDJCaBvcJs" />
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Bridal Suite</span>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-lg">
+                    <img alt="Dinner Party" class="full-image"
+                        data-alt="long rustic banquet table decorated with candles and flowers for an elegant private outdoor dinner"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTt7DjEKqA1Dk65yGUPM5c7DePcBkMgcNDqeQkAyHUKpuMfNPPlB2sr8VBKeUjPD1oNlijA4FtYd73wusxLIUGaCD-JxdLtXHUSpJ6Bh2yKsy8bJ9dVgiETKegtH4Jj2K31PEx-sqM5MaZNmamPoP3QY1WmaahSVF0TKqcJlzmNMlkwoVTWISIVPkA1FV6oWlDqb4--pSoAj_tCJS5RLj-TJmxeTDNbzHmwHQ2DczHCqCwbztRClXUmP0u5yglF6KmRLTqUfaZXJc" />
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Summer Solstice</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-brand">
+            <div class="footer-logo">The Bespoke Gastronomy</div>
+            <p class="footer-tagline">Dedicated to the art of fine dining and the orchestration of exceptional moments.
+            </p>
+        </div>
+        <div class="footer-nav">
+            <div class="footer-col">
+                <span class="footer-label">Legal</span>
+                <a class="footer-link" href="#">Privacy Policy</a>
+                <a class="footer-link" href="#">Terms of Service</a>
+            </div>
+            <div class="footer-col">
+                <span class="footer-label">Social</span>
+                <a class="footer-link underline" href="#">Instagram</a>
+                <a class="footer-link" href="#">Facebook</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2024 The Bespoke Gastronomy. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

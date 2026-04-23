@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout | The Bespoke Gastronomy</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+<link rel="stylesheet" href="css/checkout.css">
+
+</head>
+
+
+
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#">The Bespoke Gastronomy</a>
+        <div class="nav-links">
+            <a href="#">Menu</a>
+            <a href="#">The Experience</a>
+            <a href="#">Wine Cellar</a>
+            <a href="#">Private Dining</a>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-icon-btn"><span class="material-symbols-outlined">shopping_bag</span></button>
+            <button class="nav-icon-btn"><span class="material-symbols-outlined">person</span></button>
+        </div>
+    </nav>
+    <main>
+        <div class="left-col">
+            <section>
+                <h2 class="section-title">Fulfillment Method</h2>
+                <div class="toggle-group" id="fulfillment-toggle">
+                    <button class="toggle-btn active" data-method="delivery">Home Delivery</button>
+                    <button class="toggle-btn" data-method="collection">Restaurant Collection</button>
+                </div>
+                <input id="fulfillment-method" name="fulfillment_method" type="hidden" value="delivery" />
+            </section>
+            <section class="collapsible-content" id="delivery-section">
+                <h2 class="section-title">Delivery Address</h2>
+                <div class="input-group">
+                    <input id="addr1" placeholder=" " type="text" />
+                    <label for="addr1">Address Line 1</label>
+                </div>
+                <div class="input-group">
+                    <input id="addr2" placeholder=" " type="text" />
+                    <label for="addr2">Address Line 2 (Optional)</label>
+                </div>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <input id="postcode" placeholder=" " type="text" />
+                        <label for="postcode">Postcode</label>
+                    </div>
+                    <div class="input-group">
+                        <input id="city" placeholder=" " type="text" />
+                        <label for="city">City</label>
+                    </div>
+                </div>
+            </section>
+            <section class="collapsible-content hidden" id="collection-section">
+                <h2 class="section-title">Collection Point</h2>
+                <div class="collection-info">
+                    <h4>Mayfair Flagship</h4>
+                    <p>12 Bruton Place, London, W1J 6LT</p>
+                    <p style="margin-top: 1rem;">Collection available 12:00 PM — 10:00 PM. Please present your digital
+                        receipt upon arrival.</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Payment Method</h2>
+                <div class="payment-list" id="payment-selector">
+                    <div class="payment-option" data-value="apple_pay">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">ios</span>
+                            <span class="method-name">Apple Pay</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                    <div class="payment-option selected" data-value="credit_card">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <span class="method-name">Credit Card</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                    <div class="payment-option" data-value="luxury_credit">
+                        <div class="payment-info">
+                            <span class="material-symbols-outlined">diamond</span>
+                            <span class="method-name">Luxury Dining Credit</span>
+                        </div>
+                        <div class="radio-custom"></div>
+                    </div>
+                </div>
+                <input id="selected-payment" name="payment_method" type="hidden" value="credit_card" />
+            </section>
+        </div>
+        <aside>
+            <div class="order-summary">
+                <h3 class="summary-title">Order Summary</h3>
+                <div class="cart-items">
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <p>Wagyu Beef Tartare</p>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">£42.00</span>
+                    </div>
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <p>Lobster Bisque</p>
+                            <span>Qty: 2</span>
+                        </div>
+                        <span class="item-price">£56.00</span>
+                    </div>
+                    <div class="cart-item">
+                        <div class="item-details">
+                            <p>2018 Vintage Bordeaux</p>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">£185.00</span>
+                    </div>
+                </div>
+                <div class="summary-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span>£283.00</span>
+                    </div>
+                    <div class="total-row" id="delivery-fee-row">
+                        <span>Delivery Fee</span>
+                        <span>£15.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Service Charge (12.5%)</span>
+                        <span>£35.38</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>Total</span>
+                        <span id="grand-total-amount">£333.38</span>
+                    </div>
+                </div>
+                <button class="checkout-btn">Confirm &amp; Place Order</button>
+                <p class="security-note">Secure Encryption • Discrete Delivery Guaranteed</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">The Bespoke Gastronomy</div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Contact</a>
+            </div>
+            <div class="copyright">
+                © 2024 The Bespoke Gastronomy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', () => {
+            // Fulfillment Toggle Logic
+            const toggleButtons = document.querySelectorAll('#fulfillment-toggle .toggle-btn');
+            const deliverySection = document.getElementById('delivery-section');
+            const collectionSection = document.getElementById('collection-section');
+            const fulfillmentInput = document.getElementById('fulfillment-method');
+            const deliveryFeeRow = document.getElementById('delivery-fee-row');
+            const grandTotalSpan = document.getElementById('grand-total-amount');
+
+            toggleButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const method = btn.getAttribute('data-method');
+
+                    // Update buttons
+                    toggleButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    // Update hidden input
+                    fulfillmentInput.value = method;
+
+                    // Toggle visibility
+                    if (method === 'delivery') {
+                        deliverySection.classList.remove('hidden');
+                        collectionSection.classList.add('hidden');
+                        deliveryFeeRow.style.display = 'flex';
+                        grandTotalSpan.textContent = '£333.38';
+                    } else {
+                        deliverySection.classList.add('hidden');
+                        collectionSection.classList.remove('hidden');
+                        deliveryFeeRow.style.display = 'none';
+                        grandTotalSpan.textContent = '£318.38'; // Subtracting £15 delivery fee
+                    }
+                });
+            });
+
+            // Payment Selection Logic
+            const paymentOptions = document.querySelectorAll('.payment-option');
+            const paymentInput = document.getElementById('selected-payment');
+
+            paymentOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    // Update visual state
+                    paymentOptions.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+
+                    // Update hidden input
+                    const value = option.getAttribute('data-value');
+                    paymentInput.value = value;
+                });
+            });
+
+            // Checkout Logic - Updated to ensure orderTime is set
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', () => {
+                    localStorage.setItem('orderTime', Date.now().toString());
+
+                    // Dynamic redirect based on selection
+                    const method = document.getElementById('fulfillment-method').value;
+                    if (method === 'delivery') {
+                        window.location.href = 'rider_delivery_success.html';
+                    } else {
+                        window.location.href = 'self_delivery_success.html';
+                    }
+                });
+            }
+        });</script>
+</body>
+
+</html>
