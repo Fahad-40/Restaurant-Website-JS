@@ -50,7 +50,7 @@ function RenderItems() {
     <a class="back-to-top" href="#starters">↑ Back to top</a>
   `;
 
-
+// =========== FOR ADD TO CART
     document.querySelectorAll('.dish-add-btn').forEach(button => {
 
         button.addEventListener('click', () => {
@@ -65,7 +65,7 @@ function RenderItems() {
 
     })
 
-
+// =========== finding item
 
 
 
