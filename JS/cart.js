@@ -1,31 +1,31 @@
-  // save cart 
-    function saveCart() {
-        localStorage.setItem("cart" , JSON.stringify(cart));
+// save cart 
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+// Add to cart function
+
+function AddToCart(item) {
+    let cart = [];
+
+    let checkExistingItem = cart.find(cartItem => cartItem.name === item.name);
+
+    if (checkExistingItem) {
+        item.quantity += 1;
     }
-
-       // Add to cart function
-
-    function AddToCart(item) {
-        let cart = [];
-
-        let checkExistingItem = cart.find(cartItem => cartItem.name === item.name);
-
-        if (checkExistingItem) {
-            item.quantity += 1;
-        }
-        else {
-            cart.push(
-                {
-                    name: item.name,
-                    price: item.price,
-                    img: item.img,
-                    quantity: item.quantity
-                }
-            )
-        }
-        saveCart();
-
+    else {
+        cart.push(
+            {
+                name: item.name,
+                price: item.price,
+                img: item.img,
+                quantity: item.quantity
+            }
+        )
     }
+    saveCart();
+
+}
 
 
 // Getting Items from Cart
@@ -33,12 +33,12 @@
 function updateCartUI() {
 
     let cartItemsContainer = document.querySelector("#cart-items-container");
-    
-let cartLS = JSON.parse(localStorage.getItem("cart"));
 
-cartLS.forEach(cartItem => {
+    let cartLS = JSON.parse(localStorage.getItem("cart"));
 
-    cartItemsContainer.innerHTML += `
+    cartLS.forEach(cartItem => {
+
+        cartItemsContainer.innerHTML += `
     
                  <div class="cart-item">
                     <div class="cart-item-img">
@@ -50,7 +50,7 @@ cartLS.forEach(cartItem => {
                         <div class="cart-item-controls">
                             <div class="qty-selector">
                                 <button class="qty-btn">−</button>
-                                <span class="qty-val">1</span>
+                                <span class="qty-val">${cartItem.quantity}</span>
                                 <button class="qty-btn">+</button>
                             </div>
                             <button class="remove-btn">Remove</button>
@@ -61,7 +61,7 @@ cartLS.forEach(cartItem => {
     `
 
 
-})
+    })
 
 }
 
