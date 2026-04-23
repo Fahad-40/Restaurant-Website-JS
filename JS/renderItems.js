@@ -84,35 +84,9 @@ function RenderItems() {
 
     }
 
-    // Add to cart function
+ 
 
-    function AddToCart(item) {
-        let cart = [];
-
-        let checkExistingItem = cart.find(cartItem => cartItem.name === item.name);
-
-        if (checkExistingItem) {
-            item.quantity += 1;
-        }
-        else {
-            cart.push(
-                {
-                    name: item.name,
-                    price: item.price,
-                    img: item.img,
-                    quantity: item.quantity
-                }
-            )
-        }
-        saveCart();
-
-    }
-
-    // save cart 
-    function saveCart() {
-        localStorage.setItem("cart" , JSON.stringify(cart));
-    }
-
+  
 
     // ==========================  Extra animating Functions   ==============================
 
