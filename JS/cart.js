@@ -1,3 +1,5 @@
+    let cart = [];
+
 // save cart 
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -6,12 +8,11 @@ function saveCart() {
 // Add to cart function
 
 function AddToCart(item) {
-    let cart = [];
 
     let checkExistingItem = cart.find(cartItem => cartItem.name === item.name);
 
     if (checkExistingItem) {
-        item.quantity += 1;
+        checkExistingItem.quantity += 1;
     }
     else {
         cart.push(
@@ -19,12 +20,12 @@ function AddToCart(item) {
                 name: item.name,
                 price: item.price,
                 img: item.img,
-                quantity: item.quantity
+                quantity: 1
             }
         )
     }
     saveCart();
-
+    countUpdate();
 }
 
 
@@ -59,9 +60,25 @@ function updateCartUI() {
                 </div>
 
     `
-
-
     })
 
 }
 
+function countUpdate() {
+    let cartLS = JSON.parse(localStorage.getItem("cart"));
+    cartLength = cartLS.length;
+ document.querySelector('.basket-count').innerText = cartLS.length 
+}
+
+function EmptyCart() {
+    let cartLS = JSON.parse(localStorage.getItem("cart"));
+    let cartItemsContainer = document.querySelector("#cart-items-container");
+    cartLength = cartLS.length;
+    
+    if (cartLS.length === 0) {
+     cartItemsContainer.innerHTML = `
+    <h2 class="empty-cart">Your cart is empty</h2>  // ✅
+`;
+    }
+
+}
