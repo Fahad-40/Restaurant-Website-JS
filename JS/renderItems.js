@@ -104,9 +104,14 @@ function RenderItems() {
                 }
             )
         }
+        saveCart();
 
     }
 
+    // save cart 
+    function saveCart() {
+        localStorage.setItem("cart" , JSON.stringify(cart));
+    }
 
 
     // ==========================  Extra animating Functions   ==============================
