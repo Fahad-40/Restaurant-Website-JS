@@ -138,6 +138,7 @@ checkoutBtn.addEventListener('click', () => {
     const method = document.getElementById('fulfillment-method').value;
     if (method === 'delivery') {
         window.location.href = 'rider_delivery_success.html';
+        showEstimatedArrival();
     } else {
         window.location.href = 'self_delivery_success.html';
     }
