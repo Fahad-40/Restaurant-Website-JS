@@ -221,24 +221,7 @@ renderOrderSummary()
             });
 
             // Checkout Logic - Updated to ensure orderTime is set
-    if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', () => {
-  
-        if (!IsValidInput()) {
-            return;
-        }
 
-        localStorage.setItem('orderTime', Date.now().toString());
-
-        // Dynamic redirect based on selection
-        const method = document.getElementById('fulfillment-method').value;
-        if (method === 'delivery') {
-            window.location.href = 'rider_delivery_success.html';
-        } else {
-            window.location.href = 'self_delivery_success.html';
-        }
-    });
-}
 
 
         });</script>

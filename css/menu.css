@@ -713,7 +713,7 @@
       }
 
       .error-msg {
-    color: red;
+    color:var(--color-primary-dark);
     font-size: 12px;
     margin-top: 4px;
     display: block;

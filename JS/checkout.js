@@ -31,7 +31,7 @@ function renderOrderSummary() {
     let subTotal = 0;
 
     cart.forEach(cartItem => {
-        subTotal += cartItem.price * cartItem.quantity;
+        subTotal += Number(cartItem.price) * Number(cartItem.quantity);
     })
 
     let subTotalTextSpan = document.querySelector('.subTotal-text-span');
@@ -50,7 +50,7 @@ function renderOrderSummary() {
 
 
     subTotalTextSpan.innerText = `£${subTotal.toFixed(2)}`;
-    deliveryTextSpan.innerText = `£${deliveryFee.toFixed(2)}`; 
+    deliveryTextSpan.innerText = `£${deliveryFee.toFixed(2)}`;
     serviceTextSpan.innerText = `£${subTotal_service.toFixed(2)}`;
     grandTotalAmountSpan.innerText = `£${grandTotal.toFixed(2)}`;
 
@@ -66,8 +66,14 @@ function renderOrderSummary() {
 }
 renderOrderSummary()
 
-let checkoutBtn = document.getElementById('checkout-btn');
-
+const checkoutBtn = document.querySelector('.checkout-btn');
+function scrollToField(element) {
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+    element.focus();
+}
 function IsValidInput() {
 
     let isvalid = true;
@@ -79,42 +85,64 @@ function IsValidInput() {
         let addr1Error = document.getElementById('addr1-error')
         if (addr1.value.trim() === "") {
             addr1Error.innerText = "Address Line 1 is required";
+            addr1.style.borderBottom = "1px solid #d4ad65"
             isvalid = false;
-            checkoutBtn.disabled = true;
-            checkoutBtn.style.opacity = "0.5";
+             scrollToField(addr1); 
         }
         else {
-    addr1Error.innerText = ""      
-    addr1.style.border = ""        
-}
+            addr1Error.innerText = ""
+            addr1.style.border = ""
+          
+        }
 
         let postcode = document.getElementById('postcode')
         let postcodeError = document.getElementById('postcode-error');
 
         if (postcode.value.trim() === "") {
-         postcodeError.innerText = "Postcode is required" 
+            postcodeError.innerText = "Postcode is required"
             isvalid = false;
-        }else {
-    postcodeError.innerText = ""      
-    postcode.style.border = ""        
-}
+        } else {
+            postcodeError.innerText = "";
+            postcode.style.border = "";
+        }
 
         let city = document.getElementById('city');
         let cityError = document.getElementById('city-error');
         if (city.value.trim() === "") {
-         cityError.innerText = "City is required"    
+            cityError.innerText = "City is required"
             isvalid = false;
-        }else {
-    cityError.innerText = ""      
-    city.style.border = ""        
-}
+        } else {
+            cityError.innerText = ""
+            city.style.border = ""
+      
+        }
 
+    }
+
+    if (isvalid) {
+           checkoutBtn.disabled = false;
+            checkoutBtn.style.opacity = "1";
     }
     return isvalid;
 }
+// IsValidInput()
+checkoutBtn.addEventListener('click', () => {
 
-  
-// const checkoutBtn = document.querySelector('.checkout-btn');
+    if (!IsValidInput()) {
+        return;
+    }
+
+    localStorage.setItem('orderTime', Date.now().toString());
+
+    // Dynamic redirect based on selection
+    const method = document.getElementById('fulfillment-method').value;
+    if (method === 'delivery') {
+        window.location.href = 'rider_delivery_success.html';
+    } else {
+        window.location.href = 'self_delivery_success.html';
+    }
+});
+
 
 
 
