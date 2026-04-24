@@ -16,7 +16,7 @@ function showEstimatedArrival() {
     let now = new Date();
     let earliest = new Date(now.getTime() + 30 * 60 * 1000);
     let latest = new Date(now.getTime() + 60 * 60 * 1000);
-let arrivalTimeDisplay = document.querySelector(".arrival-value") 
+let arrivalTimeDisplay = document.querySelector(".detail-value") 
 
 
 arrivalTimeDisplay.innerHTML = `${formatTime(earliest)} — ${formatTime(latest)}`;
