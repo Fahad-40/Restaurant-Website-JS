@@ -86,3 +86,20 @@ function EmptyCart() {
 
 }
 updateCartUI();
+
+function increaseQty() {
+    document.querySelectorAll(".qty-plus").forEach(button => {
+        button.addEventListener("click", () => {
+
+            let itemName = button.dataset.name;
+
+            let checkExistingItem = cart.find(cartItem => cartItem.name === itemName);
+            if (checkExistingItem) {
+                checkExistingItem.quantity += 1;
+            }
+            saveCart();
+            updateCartUI();
+        })
+    })
+}
+
