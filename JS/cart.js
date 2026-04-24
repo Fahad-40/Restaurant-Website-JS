@@ -63,28 +63,33 @@ function updateCartUI() {
     `
     })
     increaseQty();
-decreaseQty();
+    decreaseQty();
+    removeItem()
+    countUpdate();
+    EmptyCart()
 }
 
 
 function countUpdate() {
-    let cartLS = JSON.parse(localStorage.getItem("cart"));
-    cartLength = cartLS.length;
-    document.querySelector('.basket-count').innerText = cartLS.length
+   
+    document.querySelector('.basket-count').innerText = cart.length
 }
 countUpdate();
 
+
 function EmptyCart() {
-    let cartLS = JSON.parse(localStorage.getItem("cart"));
-    let cartItemsContainer = document.querySelector("#cart-items-container");
-    cartLength = cartLS.length;
+  let cartItemsContainer = document.querySelector("#cart-items-container");
+  let reviewBtn = document.querySelector(".review-btn");
 
-    if (cartLS.length === 0) {
-        cartItemsContainer.innerHTML = `
-    <h2 class="empty-cart">Your cart is empty</h2>  
-`;
-    }
-
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = `<h2 class="empty-cart">Your cart is empty</h2>`;
+   reviewBtn.style.pointerEvents = "none"; // Click block karne ke liye
+reviewBtn.style.opacity = "0.5";  
+  }
+  else{
+       reviewBtn.style.pointerEvents = "display"; // Click block karne ke liye
+reviewBtn.style.opacity = "1";  
+  }
 }
 updateCartUI();
 
@@ -116,12 +121,29 @@ function decreaseQty() {
                 updateCartUI();
             }
 
-           else{
-               cart = cart.filter(cartItem => cartItem.name !== itemName);
+            else {
+                cart = cart.filter(cartItem => cartItem.name !== itemName);
                 saveCart();
                 updateCartUI();
             }
         })
+    })
+
+}
+
+// Remove Functionality
+
+function removeItem() {
+    document.querySelectorAll(".remove-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            let itemName = button.dataset.name;
+
+            cart = cart.filter(cartItem => cartItem.name !== itemName);
+            saveCart();
+            updateCartUI();
+        })
+
+
     })
 
 }

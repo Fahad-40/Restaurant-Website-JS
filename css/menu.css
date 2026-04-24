@@ -707,4 +707,7 @@
             }
         }
 
-      
+      .empty-cart{
+        color:#8B8579;
+        text-align: center;
+      }
