@@ -48,6 +48,7 @@
                 <div class="input-group">
                     <input id="addr1" placeholder=" " type="text" />
                     <label for="addr1">Address Line 1</label>
+                    <span class="error-msg" id="addr1-error"></span> 
                 </div>
                 <div class="input-group">
                     <input id="addr2" placeholder=" " type="text" />
@@ -57,10 +58,12 @@
                     <div class="input-group">
                         <input id="postcode" placeholder=" " type="text" />
                         <label for="postcode">Postcode</label>
+                         <span class="error-msg" id="postcode-error"></span> 
                     </div>
                     <div class="input-group">
                         <input id="city" placeholder=" " type="text" />
                         <label for="city">City</label>
+                         <span class="error-msg" id="city-error"></span> 
                     </div>
                 </div>
             </section>
@@ -184,18 +187,19 @@
 
                     // Update hidden input
                     fulfillmentInput.value = method;
-
+renderOrderSummary()
                     // Toggle visibility
                     if (method === 'delivery') {
                         deliverySection.classList.remove('hidden');
                         collectionSection.classList.add('hidden');
                         deliveryFeeRow.style.display = 'flex';
-                        grandTotalSpan.textContent = '£333.38';
+                        // grandTotalSpan.textContent = '£333.38';
                     } else {
                         deliverySection.classList.add('hidden');
                         collectionSection.classList.remove('hidden');
                         deliveryFeeRow.style.display = 'none';
-                        grandTotalSpan.textContent = '£318.38'; // Subtracting £15 delivery fee
+                        // grandTotalSpan.textContent = '£318.38'; 
+                     renderOrderSummary()   
                     }
                 });
             });
@@ -217,20 +221,26 @@
             });
 
             // Checkout Logic - Updated to ensure orderTime is set
-            const checkoutBtn = document.querySelector('.checkout-btn');
-            if (checkoutBtn) {
-                checkoutBtn.addEventListener('click', () => {
-                    localStorage.setItem('orderTime', Date.now().toString());
+    if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+  
+        if (!IsValidInput()) {
+            return;
+        }
 
-                    // Dynamic redirect based on selection
-                    const method = document.getElementById('fulfillment-method').value;
-                    if (method === 'delivery') {
-                        window.location.href = 'rider_delivery_success.html';
-                    } else {
-                        window.location.href = 'self_delivery_success.html';
-                    }
-                });
-            }
+        localStorage.setItem('orderTime', Date.now().toString());
+
+        // Dynamic redirect based on selection
+        const method = document.getElementById('fulfillment-method').value;
+        if (method === 'delivery') {
+            window.location.href = 'rider_delivery_success.html';
+        } else {
+            window.location.href = 'self_delivery_success.html';
+        }
+    });
+}
+
+
         });</script>
 </body>
 

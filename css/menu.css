@@ -711,3 +711,10 @@
         color:#8B8579;
         text-align: center;
       }
+
+      .error-msg {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+}
