@@ -62,7 +62,8 @@ function updateCartUI() {
 
     `
     })
-
+    increaseQty();
+decreaseQty();
 }
 
 
@@ -103,3 +104,24 @@ function increaseQty() {
     })
 }
 
+function decreaseQty() {
+
+    document.querySelectorAll(".qty-minus").forEach(button => {
+        button.addEventListener("click", () => {
+            let itemName = button.dataset.name;
+            let checkExistingItem = cart.find(cartItem => cartItem.name === itemName);
+            if (checkExistingItem.quantity > 1) {
+                checkExistingItem.quantity -= 1;
+                saveCart();
+                updateCartUI();
+            }
+
+           else{
+               cart = cart.filter(cartItem => cartItem.name !== itemName);
+                saveCart();
+                updateCartUI();
+            }
+        })
+    })
+
+}
