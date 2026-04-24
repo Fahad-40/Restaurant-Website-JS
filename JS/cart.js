@@ -1,4 +1,4 @@
-    let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || []
 
 // save cart 
 function saveCart() {
@@ -26,6 +26,7 @@ function AddToCart(item) {
     }
     saveCart();
     countUpdate();
+    updateCartUI();
 }
 
 
@@ -34,7 +35,7 @@ function AddToCart(item) {
 function updateCartUI() {
 
     let cartItemsContainer = document.querySelector("#cart-items-container");
-
+    cartItemsContainer.innerHTML = ``;
     let cartLS = JSON.parse(localStorage.getItem("cart"));
 
     cartLS.forEach(cartItem => {
@@ -50,11 +51,11 @@ function updateCartUI() {
                         <p class="cart-item-price">${cartItem.price}</p>
                         <div class="cart-item-controls">
                             <div class="qty-selector">
-                                <button class="qty-btn">−</button>
+                                <button class="qty-btn qty-minus" data-name="${cartItem.name}">−</button>
                                 <span class="qty-val">${cartItem.quantity}</span>
-                                <button class="qty-btn">+</button>
+                            <button class="qty-btn qty-plus" data-name="${cartItem.name}">+</button>
                             </div>
-                            <button class="remove-btn">Remove</button>
+                            <button class="remove-btn" data-name="${cartItem.name}">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -64,21 +65,24 @@ function updateCartUI() {
 
 }
 
+
 function countUpdate() {
     let cartLS = JSON.parse(localStorage.getItem("cart"));
     cartLength = cartLS.length;
- document.querySelector('.basket-count').innerText = cartLS.length 
+    document.querySelector('.basket-count').innerText = cartLS.length
 }
+countUpdate();
 
 function EmptyCart() {
     let cartLS = JSON.parse(localStorage.getItem("cart"));
     let cartItemsContainer = document.querySelector("#cart-items-container");
     cartLength = cartLS.length;
-    
+
     if (cartLS.length === 0) {
-     cartItemsContainer.innerHTML = `
-    <h2 class="empty-cart">Your cart is empty</h2>  // ✅
+        cartItemsContainer.innerHTML = `
+    <h2 class="empty-cart">Your cart is empty</h2>  
 `;
     }
 
 }
+updateCartUI();
