@@ -48,7 +48,7 @@ function updateCartUI() {
                     </div>
                     <div class="cart-item-details">
                         <h3 class="cart-item-name">${cartItem.name}</h3>
-                        <p class="cart-item-price">${cartItem.price}</p>
+                        <p class="cart-item-price">£${cartItem.price}</p>
                         <div class="cart-item-controls">
                             <div class="qty-selector">
                                 <button class="qty-btn qty-minus" data-name="${cartItem.name}">−</button>

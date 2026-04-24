@@ -11,7 +11,7 @@ const menuData = [
             // item 1
             {
                 name: "Wagyu Beef Tartare",
-                price: "£120",
+                price: 120,
                 desc: "Hand-cut wagyu, quail egg, capers, dijon mustard, toasted brioche",
                 badge:
                 {
@@ -24,7 +24,7 @@ const menuData = [
             // item 2
             {
                 name: "Truffle Cheese Arancini",
-                price: "£90",
+                price: 90,
                 desc: "Crispy Italian rice balls stuffed with truffle-infused mozzarella and herbs",
                 badge: {
                     text: "Vegetarian", type: "badge-veg"
@@ -37,7 +37,7 @@ const menuData = [
 
             {
                 name: "Hokkaido Scallops",
-                price: "£95",
+                price: 95,
                 desc: "Pan-seared scallops, cauliflower purée, crispy pancetta, herb oil",
                 badge: {
                     text: "Seasonal", type: "badge-chef"
@@ -63,7 +63,7 @@ const menuData = [
 
             {
                 name: "Saffron Lobster Bisque",
-                price: "£110",
+                price: 110,
                 desc: "Velvety lobster broth, cognac cream, poached lobster chunks",
                 badge: {
                     text: "Signature", type: "badge-chef"
@@ -76,7 +76,7 @@ const menuData = [
 
             {
                 name: "Burrata & Heirloom Salad",
-                price: "£85",
+                price: 85,
                 desc: "Creamy burrata cheese, seasonal tomatoes, pesto oil, pine nuts",
                 badge: {
                     text: "Elite", type: "badge-veg"
@@ -88,7 +88,7 @@ const menuData = [
             //item 3
             {
                 name: "Wild Mushroom Cream Soup",
-                price: "£55",
+                price: 55,
                 desc: "Rich forest mushroom blend with a touch of truffle and garlic croutons",
                 badge: { text: "Classic", type: "badge-popular" },
                 img: "Assets/Images/Home/recipe2.png",
@@ -113,7 +113,7 @@ const menuData = [
             // item 1
             {
                 name: "Filet Mignon with Truffle Mash",
-                price: "£185",
+                price: 185,
                 desc: "Prime beef tenderloin, creamy truffle mashed potatoes, red wine jus",
                 badge: {
                     text: "Best Seller", type: "badge-popular"
@@ -125,7 +125,7 @@ const menuData = [
             // item 2
             {
                 name: "Filet Mignon with Truffle Mash",
-                price: "£185",
+                price: 185,
                 desc: "Prime beef tenderloin, creamy truffle mashed potatoes, red wine jus",
                 badge: {
                     text: "Best Seller", type: "badge-popular"
@@ -137,7 +137,7 @@ const menuData = [
             // item 3
             {
                 name: "Slow-Roasted Lamb & Saffron Rice",
-                price: "£210",
+                price: 210,
                 desc: "Tender lamb shank served with fragrant saffron-infused basmati rice",
                 badge: { text: "Signature", type: "badge-chef" },
                 img: "Assets/Images/Home/recipe2.png",

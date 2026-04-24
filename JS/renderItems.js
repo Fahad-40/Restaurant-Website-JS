@@ -15,7 +15,7 @@ function RenderItems() {
                  <div class="dish-card">
                         <div class="dish-card-info">
                             <div class="dish-name">${item.name}</div>
-                            <div class="dish-price">${item.price}</div>
+                            <div class="dish-price">£${item.price}</div>
                             <div class="dish-desc">${item.desc}</div>
                             <div class="dish-badges"><span class="badge ${item.badge.type}">${item.badge.text}</span></div>
                         </div>
