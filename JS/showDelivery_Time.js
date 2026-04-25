@@ -22,3 +22,7 @@ arrivalTimeDisplay.innerHTML = `${formatTime(earliest)} — ${formatTime(latest)
 }
 showEstimatedArrival()
 
+let orderId = document.querySelector(".order-id");
+let orderIdValue = localStorage.getItem("orderID");
+
+orderId.textContent = orderIdValue;
