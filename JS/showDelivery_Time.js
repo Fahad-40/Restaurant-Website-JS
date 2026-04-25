@@ -1,5 +1,3 @@
-
-
 function formatTime(date) {
 
     let hour = date.getHours();
@@ -23,3 +21,4 @@ arrivalTimeDisplay.innerHTML = `${formatTime(earliest)} — ${formatTime(latest)
 
 }
 showEstimatedArrival()
+

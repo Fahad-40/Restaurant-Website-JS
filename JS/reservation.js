@@ -1,8 +1,8 @@
 let dateInput = document.querySelector(`input[type="date"]`);
-let summaryDate = document.querySelector('.summary-value')
+let summaryDate = document.querySelector(".summary-value");
 
 function currentDate() {
-    let now = new Date()
+    let now = new Date();
 
     let today = now.toISOString().split("T")[0];
     dateInput.value = today;
@@ -11,12 +11,12 @@ function currentDate() {
         year: "numeric",
         month: "long",
         day: "numeric"
-    })
+    });
 
     summaryDate.innerText = formatedDate2;
-
 }
-currentDate()
+
+currentDate();
 
 dateInput.addEventListener("change", () => {
     let dateValue = new Date(dateInput.value);
@@ -25,11 +25,10 @@ dateInput.addEventListener("change", () => {
         year: "numeric",
         month: "long",
         day: "numeric"
-    })
+    });
 
     summaryDate.innerText = formatedDate;
-})
-
+});
 
 let timeSelect = document.querySelectorAll("select")[0];
 let guestCount = document.querySelectorAll("select")[1];
@@ -39,41 +38,26 @@ let summaryValueTime = document.querySelector(".summary-value-time");
 let summaryValueGuest = document.querySelector(".summary-value-guest");
 let summaryValueOccasion = document.querySelector(".summary-value-occasion");
 
-timeSelect.addEventListener("change" , () =>{
+timeSelect.addEventListener("change", () => {
+    let timeValue = timeSelect.value;
+    summaryValueTime.textContent = timeValue;
+});
 
-let timeValue = timeSelect.value;
-summaryValueTime.textContent = timeValue;
+guestCount.addEventListener("change", () => {
+    let guestValue = guestCount.value;
+    summaryValueGuest.textContent = guestValue;
+});
 
-})
-
-guestCount.addEventListener("change" , () =>{
-
-let guestValue = guestCount.value;
-summaryValueGuest.textContent = guestValue;
-
-})
-
-occasion.addEventListener("change" , () =>{
-   e.preventDefault() 
-let occasionValue = occasion.value;
-summaryValueOccasion.textContent = occasionValue;
-
-})
+occasion.addEventListener("change", () => {
+    let occasionValue = occasion.value;
+    summaryValueOccasion.textContent = occasionValue;
+});
 
 let submitBtn = document.querySelector(".submit-btn");
 
-function generateOrderID() {
-    let number = Math.floor(Math.random() * 900) + 100;
-    return `BG-${number}-VIP`;
-}
+submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
 
-
-submitBtn.addEventListener('click', () => {
-
-    let id = generateOrderID(); // 👈 ID lo
-
-    localStorage.setItem("reservationID", id); // 👈 save karo
-
-    // redirect
+    window.reservationIDManager.saveNewReservationID();
     window.location.href = "reservation_success.html";
 });

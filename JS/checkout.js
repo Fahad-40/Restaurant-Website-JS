@@ -132,6 +132,10 @@ checkoutBtn.addEventListener('click', () => {
         return;
     }
 
+let randomNum = Math.floor(Math.random() * 9000) + 1000;
+let newId = "BG-" + randomNum + "-VIP";
+localStorage.setItem("orderID" , newId);
+
     localStorage.setItem('orderTime', Date.now().toString());
 
     // Dynamic redirect based on selection
