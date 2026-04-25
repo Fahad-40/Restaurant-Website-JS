@@ -54,7 +54,7 @@ summaryValueGuest.textContent = guestValue;
 })
 
 occasion.addEventListener("change" , () =>{
-
+   e.preventDefault() 
 let occasionValue = occasion.value;
 summaryValueOccasion.textContent = occasionValue;
 
@@ -62,8 +62,18 @@ summaryValueOccasion.textContent = occasionValue;
 
 let submitBtn = document.querySelector(".submit-btn");
 
-submitBtn.addEventListener("click" ,()=> {
+function generateOrderID() {
+    let number = Math.floor(Math.random() * 900) + 100;
+    return `BG-${number}-VIP`;
+}
 
-generateOrderID();
 
-})
+submitBtn.addEventListener('click', () => {
+
+    let id = generateOrderID(); // 👈 ID lo
+
+    localStorage.setItem("reservationID", id); // 👈 save karo
+
+    // redirect
+    window.location.href = "reservation_success.html";
+});
