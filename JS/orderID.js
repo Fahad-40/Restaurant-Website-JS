@@ -1,3 +1,5 @@
+let reservationOrderId = document.querySelector(".details-value")
+
 function OrderID() {
     
     let letters = ['A','B','C','D','E','F','G','H','J','K','L','M',
@@ -6,6 +8,10 @@ function OrderID() {
 let letter1 = letters[Math.floor(Math.random() * letters.length)];
 let letter2 = letters[Math.floor(Math.random() * letters.length)];
 
-let number = 
+let number = Math.floor(Math.random() * 900) + 100;
+
+let id = `BG-${number}-VIP`;
+
+reservationOrderId.textContent = id;
 
 }
