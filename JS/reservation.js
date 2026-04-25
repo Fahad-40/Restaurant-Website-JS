@@ -59,3 +59,5 @@ let occasionValue = occasion.value;
 summaryValueOccasion.textContent = occasionValue;
 
 })
+
+
