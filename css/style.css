@@ -1,4 +1,8 @@
-
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         /* Base Reset & Variables */
         :root {
             --color-bg: #131313;
@@ -14,11 +18,7 @@
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
 
         body {
             background-color: var(--color-bg);
@@ -217,7 +217,7 @@
 
         .scroll-indicator {
             position: absolute;
-            bottom: 3rem;
+            bottom: 6rem;
             left: 50%;
             transform: translateX(-50%);
             animation: bounce 2s infinite;

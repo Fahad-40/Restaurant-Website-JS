@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&amp;family=Noto+Serif:ital,wght@0,300;0,400;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e9e1d8",
+                    "on-surface-variant": "#d1c5b4",
+                    "inverse-on-surface": "#34302a",
+                    "secondary-fixed-dim": "#d9c4a0",
+                    "primary-fixed": "#ffdea4",
+                    "on-primary-container": "#705312",
+                    "on-surface": "#e9e1d8",
+                    "primary-container": "#f1c97d",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed": "#261900",
+                    "surface-container-highest": "#38342e",
+                    "tertiary-fixed": "#d5e3ff",
+                    "error-container": "#93000a",
+                    "surface": "#16130e",
+                    "on-tertiary-container": "#3e5981",
+                    "on-tertiary-fixed": "#001b3b",
+                    "on-primary": "#412d00",
+                    "tertiary-container": "#b5d0ff",
+                    "tertiary": "#e2ebff",
+                    "outline-variant": "#4e4639",
+                    "surface-tint": "#e8c176",
+                    "on-background": "#e9e1d8",
+                    "on-tertiary-fixed-variant": "#2c476f",
+                    "on-secondary-fixed-variant": "#534529",
+                    "outline": "#9a8f80",
+                    "surface-dim": "#16130e",
+                    "surface-variant": "#38342e",
+                    "inverse-primary": "#775a19",
+                    "primary": "#ffe8c1",
+                    "on-error": "#690005",
+                    "surface-container": "#231f1a",
+                    "surface-container-low": "#1e1b16",
+                    "on-secondary-container": "#c7b28f",
+                    "surface-bright": "#3d3933",
+                    "primary-fixed-dim": "#e8c176",
+                    "on-primary-fixed-variant": "#5d4200",
+                    "error": "#ffb4ab",
+                    "secondary": "#d9c4a0",
+                    "surface-container-high": "#2d2924",
+                    "surface-container-lowest": "#110e09",
+                    "secondary-container": "#534529",
+                    "tertiary-fixed-dim": "#adc8f6",
+                    "on-secondary-fixed": "#251a04",
+                    "background": "#16130e",
+                    "on-tertiary": "#123157",
+                    "on-secondary": "#3b2e15",
+                    "secondary-fixed": "#f6e0ba"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "stack-lg": "64px",
+                    "stack-sm": "16px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-edge": "40px",
+                    "stack-md": "32px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Manrope"],
+                    "display-lg": ["Noto Serif"],
+                    "title-sm": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "label-caps": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "title-sm": ["20px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                    "label-caps": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.15em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-[#131313] text-on-surface antialiased overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#131313]/90 backdrop-blur-md text-[#f1c97d] font-['Noto_Serif'] antialiased docked full-width top-0 z-50 border-b border-[#353534] flat no shadows">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl tracking-[0.2em] font-light text-[#f1c97d] uppercase">L'ÉCLAT</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-[#f1c97d] border-b border-[#f1c97d] pb-1 hover:text-[#f1c97d] transition-colors duration-500" href="#">The Menu</a>
+<a class="text-white/70 font-light tracking-wide hover:text-[#f1c97d] transition-colors duration-500" href="#">Reservations</a>
+<a class="text-white/70 font-light tracking-wide hover:text-[#f1c97d] transition-colors duration-500" href="#">Private Dining</a>
+<a class="text-white/70 font-light tracking-wide hover:text-[#f1c97d] transition-colors duration-500" href="#">Our Story</a>
+</nav>
+<button class="border border-[#f1c97d] px-6 py-2 font-label-caps text-label-caps text-[#f1c97d] hover:bg-[#f1c97d] hover:text-[#131313] transition-all duration-300">
+                Book a Table
+            </button>
+</div>
+</header>
+<main class="min-h-screen pt-32 pb-stack-lg">
+<!-- Hero Context -->
+<section class="max-w-7xl mx-auto px-margin-edge text-center mb-stack-lg">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-sm">Echoes of Excellence</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Voices of those who have journeyed through our culinary landscape, where every detail is a testament to the art of fine dining.</p>
+</section>
+<!-- Marquee Section -->
+<section class="marquee-container relative w-full overflow-hidden py-10">
+<!-- Left Gradient Fade -->
+<div class="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#131313] to-transparent"></div>
+<div class="flex whitespace-nowrap animate-marquee">
+<!-- First Set -->
+<div class="flex gap-gutter px-4">
+<!-- Testimonial Card 1 -->
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up portrait of a refined middle-aged man in a dark tailored suit, soft moody interior lighting, high-end photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfgNn4tyPmqCbIiyaoXzFaXOarTjgfyYs-aiLzuxU9fsaenhNRmxMN2uRXvlbmj6QqfODHXVqJ3DdvtIeJy4lhXPlN5ftm3kg4c0AvYSB7jUgdhzN2PaDk3xxdxH-bR4T1anbiU5CigTYH_fVTH15rZsRDAn_04jJKmwWlMZX-sHX-lOSqR1hvfwzAyvYL9f67tifgFpldm7-vOlqcOrNT1EU5YagI0w0I4vVKNN0Rt3wZ4xRPJoEqy3y8utbsHflzjx0Mlz2oP-tn"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Julian Vane</span>
+<div class="flex text-[#f1c97d] gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant overflow-hidden text-ellipsis">"The Wagyu was transformative, a true masterpiece of texture."</p>
+</div>
+<!-- Testimonial Card 2 -->
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Elegant portrait of a sophisticated woman with understated jewelry, soft warm spotlight, minimalist dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDenlqFaBIuY3etkMbnJTcur48sFrcOK0lizuZWW4FmyWRoa3rfivjs1IAliYS2eQ-APRGMiwDN0Ntqq_L03_Ovjx3qtarXOTaHhM6HaFa31FQZrlfxhHaLkHWBa2R_WaIctwil4DmV9ly2_tmx7Tz3NbEBmA5uDi8AgjpDKvtI8Qgice-9Q2CX7zsvxdLDchCw5toHlKdXIRvAyCVK5qR8cpeDvy1E8fkiLE8XwZm3_lxIQqLxt_CagZW38t9-lX9d_VXOskRY-xje"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Elena Rossi</span>
+<div class="flex text-[#f1c97d] gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant overflow-hidden text-ellipsis">"Absolute perfection in every detail; the service was impeccable."</p>
+</div>
+<!-- Testimonial Card 3 -->
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional headshot of a man in deep thought, dramatic chiaroscuro lighting, luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAASLQeM7ODcPgQGDwXuZqrmrlPnj1rMo1RrwmUPqgi0CR7lwWFE6rmMq0FB72dwgvJCXlrgZ6BKOp8AYEJpt45ce04AkfobWbVSD8gugFMSeVgLIXxvwhTVjxh6DYvx1VN8JcdXZXgpPKU6250sj8jU1yIViu-6JxXYE1pw-Xwb3fk2lQ_EIYDOtaA8EUWuqcqidqHPyqKppi-O-o_Ek1J_irsVIWPxUoaPKpdleDMdeXbuIlSirDgmkbRURETHnboQ7p-mmJwiK2e"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Marcus Thorne</span>
+<div class="flex text-[#f1c97d] gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant overflow-hidden text-ellipsis">"An evocative journey through flavors I never thought possible."</p>
+</div>
+<!-- Testimonial Card 4 -->
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of a creative woman in a dark studio setting, soft side light, refined professional appearance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKzF9mrheOpBjmqmwvbLo-Y6kFNHnKz13kiCr0U9Cmu0GBPznpPuiE3WPmAjcVId8kRj16gFtFCnO8DKSzgAmSNU62dUjolmXtjZ3rW21VdVISVvza2x93FUTjGUatNYvRENtXuY0g40favvUe3TPoNjAogx0O_FyWP-HMSlnbLwtg8-dGx9T-3ZXDmYb8AcSL9egoHLK9PmQLBdywFGS_yeQ23DtYWfrI_8aEpP-we0MQdIEXTKeT2igztV90vobDPZn6VRtfZr2V"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Sarah Sterling</span>
+<div class="flex text-[#f1c97d] gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant overflow-hidden text-ellipsis">"The pairing of wine and truffle was hauntingly beautiful."</p>
+</div>
+</div>
+<!-- Duplicate Set for Seamless Loop -->
+<div class="flex gap-gutter px-4">
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close-up portrait of Julian Vane" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUz8F-VbrhxwUeFqYY4qI9xDxDBV4HDMrevFrX2M1xHvaamkP2g3posC0VS_9cOzBfWcrN99LRbuClhFxh6YHt5rxkqvtHT8bLiGiwf_RDoW2O6TjX1Jlj70TtsihDuLncP0aMafive2cGzog8bWEts088EGLiUmWjxuwjb_E56Yv9YAd0y-fqpvNZzvnvvQ3WWUsV1nHsNxizO1-tAfXg3EraHyhAIFnEOggEzKnctWAZLKhDR09iWRr9PR8VQtuf26GC-iIyvzxs"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Julian Vane</span>
+<div class="flex text-[#f1c97d] gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant">"The Wagyu was transformative, a true masterpiece of texture."</p>
+</div>
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Elegant portrait of Elena Rossi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM_vWCcRQ03TiRXcCZa6qW-lrQIgQZQnpUzY2v7_Bkzvww9wikmojJpBZ0fh9PA3NcgS6DkrHFbEF1kZMLYUr8-fZqeLS5X2nhKHKSgFgotQd_PRZzQh-3Af2x6YUU66_obP0AZh25Mycdu2uUvfvhfOvZQw4tmKx_nMlH4ecT4yIyWku6KW7wzzjca0bgK_OaPedRePyL4c8hwmuq3t_7LoEx2MooYARpVhaGD5xBgrOxGuHFrRqkfnyoBkzm4VmxP6lVZnjhL_8l"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Elena Rossi</span>
+<div class="flex text-[#f1c97d] gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant">"Absolute perfection in every detail; the service was impeccable."</p>
+</div>
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Marcus Thorne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4NUyMHObH1Ko_35uOIPi-ohmr0IuWWe6NE85Ci3IPqJ2M0PFaLp63-FShZ-QuxAOVcsCK9pGNsS7Hu273OiRmfjzPpn3gfV7jj9MAFgAoWJl51dKm2TsPmNucvdCXibPrWzn-mZKE1zkEV16PDg5ruMY2DaTEgvx8dwodhIfYc7XmKl9yxcPoyar7S3vrKMhT77DAyg4336fTLtKuzgSmk6rn9kSulDcGsXK6gMBQJsXHrGujuJvenyOu4c-Gqn6VgnIyObcgAmku"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Marcus Thorne</span>
+<div class="flex text-[#f1c97d] gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant">"An evocative journey through flavors I never thought possible."</p>
+</div>
+<div class="w-[450px] bg-[#201f1f] border border-[#353534] p-stack-md flex flex-col justify-between shrink-0 hover:border-[#f1c97d] transition-colors duration-500 group">
+<div class="flex items-center gap-4 mb-stack-sm">
+<img class="w-12 h-12 rounded-full grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Sarah Sterling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMHVx3hrLvvdd0Italg3IlT7n_6hUfGasqBR2a4w6diGj-toO-T3bzPL0xJ-NTsnwvrts-uEIKStiY5zH98Mi_871lOER1jaRf8Q7DqHNKGG2gCq2_kmnoSOX7UJUdIKXz8qM_3wXjlUwb3qe65mgIj1CPhznb0cT7SeN3T-75jlM3bQ_vAlI64LKjj7GQkUEhQ4iymFeCR8dvmsnKuJ5ltulMzCxr6XuoRj-Tc3h_MuZPdL50ZPoRaBa2YiEKC-3nMnPF0gSwzhu"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold text-on-surface">Sarah Sterling</span>
+<div class="flex text-[#f1c97d] gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span></div>
+</div>
+</div>
+<div class="w-6 h-[1px] bg-[#f1c97d] mb-4"></div>
+<p class="font-title-sm text-title-sm italic text-on-surface-variant">"The pairing of wine and truffle was hauntingly beautiful."</p>
+</div>
+</div>
+</div>
+<!-- Right Gradient Fade -->
+<div class="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#131313] to-transparent"></div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-margin-edge mt-stack-lg text-center">
+<button class="border border-[#f1c97d] px-12 py-4 font-label-caps text-label-caps tracking-widest text-[#f1c97d] hover:bg-[#f1c97d] hover:text-[#131313] transition-all duration-500 group">
+                EXPERIENCE THE ARTISTRY
+                <span class="material-symbols-outlined inline-block align-middle ml-2 group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
+</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#131313] text-[#f1c97d] font-['Noto_Serif'] text-[12px] tracking-widest uppercase full-width border-t border-[#353534] flat no shadows">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8 max-w-7xl mx-auto">
+<div class="text-[#f1c97d] font-bold">L'ÉCLAT FINE DINING</div>
+<div class="flex gap-8">
+<a class="text-white/40 hover:text-white transition-colors duration-300" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-white transition-colors duration-300" href="#">Contact</a>
+<a class="text-white/40 hover:text-white transition-colors duration-300" href="#">Careers</a>
+<a class="text-white/40 hover:text-white transition-colors duration-300" href="#">Press Kit</a>
+</div>
+<div class="text-white/40">© 2024 L'ÉCLAT FINE DINING. ALL RIGHTS RESERVED.</div>
+</div>
+</footer>
+</body></html>
