@@ -87,12 +87,12 @@ function IsValidInput() {
             addr1Error.innerText = "Address Line 1 is required";
             addr1.style.borderBottom = "1px solid #d4ad65"
             isvalid = false;
-             scrollToField(addr1); 
+            scrollToField(addr1);
         }
         else {
             addr1Error.innerText = ""
             addr1.style.border = ""
-          
+
         }
 
         let postcode = document.getElementById('postcode')
@@ -114,14 +114,14 @@ function IsValidInput() {
         } else {
             cityError.innerText = ""
             city.style.border = ""
-      
+
         }
 
     }
 
     if (isvalid) {
-           checkoutBtn.disabled = false;
-            checkoutBtn.style.opacity = "1";
+        checkoutBtn.disabled = false;
+        checkoutBtn.style.opacity = "1";
     }
     return isvalid;
 }
@@ -143,7 +143,6 @@ checkoutBtn.addEventListener('click', () => {
         window.location.href = 'self_delivery_success.html';
     }
 });
-
 
 
 

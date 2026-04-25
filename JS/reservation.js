@@ -60,4 +60,10 @@ summaryValueOccasion.textContent = occasionValue;
 
 })
 
+let submitBtn = document.querySelector(".submit-btn");
 
+submitBtn.addEventListener("click" ,()=> {
+
+generateOrderID();
+
+})
