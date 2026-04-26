@@ -687,12 +687,15 @@
             display: block;
             text-align: center;
             margin-top: 3rem;
-            font-size: 0.75rem;
+            font-size: 0.80rem;
             color: #444;
+            color: var(--color-primary);
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-
+        .back-to-top:hover {
+        transform: translateY(-3px);
+        }
         @media (max-width: 900px) {
             .sidebar {
                 display: none;
