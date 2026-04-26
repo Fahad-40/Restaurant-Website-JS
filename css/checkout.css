@@ -1,5 +1,5 @@
    :root {
-       --primary: #D4AF37;
+       --primary: #f1c97d;
        --on-primary: #261900;
        --background: #131313;
        --surface: #1c1b1b;
@@ -361,7 +361,7 @@
        width: 100%;
        margin-top: 3rem;
        padding: 1.5rem;
-       background: linear-gradient(to right, #D4AF37, #b08d2b);
+       background: linear-gradient(to right, #f1c97d, #b08d2b);
        border: none;
        color: var(--on-primary);
        text-transform: uppercase;
