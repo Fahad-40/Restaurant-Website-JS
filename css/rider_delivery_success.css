@@ -31,51 +31,8 @@
             vertical-align: middle;
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            background: rgba(10, 10, 10, 0.9);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 3rem;
-        }
+ 
 
-        .logo {
-            font-family: var(--font-serif);
-            font-weight: 700;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            font-size: 1.25rem;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: none;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .book-btn {
-            background: none;
-            border: none;
-            color: var(--primary);
-            font-size: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            cursor: pointer;
-            font-family: var(--font-serif);
-        }
 
         /* Main Layout */
         main {
