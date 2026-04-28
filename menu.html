@@ -183,6 +183,31 @@
                 sec.style.display = anyVisible ? 'block' : 'none';
             });
         });
+
+
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const body = document.body;
+
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    });
+
+    // Close menu on link click
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        });
+    });
+
+
+
+
     </script>
 
 
