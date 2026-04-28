@@ -698,16 +698,27 @@
 
         .gallery-scroller {
             display: flex;
+            gap: 1rem;
+            overflow: hidden;
+            width: 95%;
+            margin: auto;
+        }
+        @media (max-width:1444px) {
+             .gallery-scroller {
+            display: flex;
+            flex-wrap: wrap;
             gap: 2rem;
             overflow: hidden;
-            padding-left: 15%;
+            width: 90%;
+            margin: auto;
+        }
         }
 
         .gallery-item {
             flex-shrink: 0;
             position: relative;
             overflow: hidden;
-            filter: grayscale(100%);
+            filter: grayscale(70%);
             transition: all 0.7s ease;
         }
 
@@ -717,8 +728,9 @@
 
         .gallery-item-md {
             min-width: 400px;
-            height: 500px;
+            height: 400px;
         }
+        
 
         .gallery-item-sm {
             min-width: 300px;
@@ -730,7 +742,17 @@
             min-width: 500px;
             height: 500px;
         }
-
+     @media (max-width:1444px) {
+           .gallery-item-md {
+            min-width: 400px;
+            height: 350px;
+        }
+           .gallery-item-sm {
+            min-width: 400px;
+            height: 350px;
+        }
+        
+        }
         .gallery-overlay {
             position: absolute;
             inset: 0;
@@ -853,6 +875,8 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -892,26 +916,24 @@
         <section class="feature-grid">
             <div class="feature-content-container" style="grid-column: 2 / span 5; z-index: 10;">
                 <div class="feature-card">
-                    <span class="label-accent">The Subterranean Haven</span>
-                    <h2 class="feature-title">The Wine Cellar</h2>
-                    <p class="feature-description">Descend into an atmosphere of quiet prestige. Surrounded by our
-                        curated vintage collection, the cellar provides a cool, candlelit sanctuary for intimate dinners
-                        and serious tastings.</p>
+                    <span class="label-accent">The Sapphire Lounge</span>
+                    <h2 class="feature-title">Modern luxury with comfort and high-end aesthetics.</h2>
+                    <p class="feature-description">DPlush velvet seating and avant-garde art pieces make this the ultimate spot for social mixers. Features a dedicated mixology station and live jazz acoustics.</p>
                     <div class="feature-meta">
                         <div class="meta-item">
                             <span class="meta-label">Capacity</span>
-                            <span class="meta-value">14 Guests</span>
+                            <span class="meta-value">35 Guests</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Setting</span>
-                            <span class="meta-value">Seated Dining</span>
+                            <span class="meta-value">Social Lounge</span>
                         </div>
                     </div>
                     <button class="btn-outline">Request Space</button>
                 </div>
             </div>
             <div class="feature-image-container" style="grid-column: 6 / span 6;">
-                <img alt="Intimate wine cellar" class="full-image"
+                <img alt="Saphire Lounge" class="full-image"
                     data-alt="luxury underground wine cellar with dark wood racks, long wooden table, dim candle lighting and rows of wine bottles in shadows"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhlYs4ItmDHnkD8QsOYEl9VChNeZ65xfqQUOM8mliWf8C9omb63b7Wu1m3iFz62Uqcs37BuSJQtHWCnSGIyE1w3wLB998nEDMnXT3PIS36v8aXz0xW2s5_Tq6t1TnhxwcW3sPk-nA7doqWY8EGmbeGXKyLx2z8eEPk3KZEaZMay3vt83uyvnwjlEOhIG1wWxiN5lDUIWQNqO2keIyihqGDVXp59LgAB1YQ70MNrhaiOvwSnSV8qkt6WM4WCq5SqYRkbj1bPTKcKTw" />
             </div>
@@ -924,19 +946,17 @@
             </div>
             <div class="feature-content-container">
                 <div class="feature-card">
-                    <span class="label-accent">Al Fresco Excellence</span>
-                    <h2 class="feature-title">The Terrace</h2>
-                    <p class="feature-description">A sophisticated open-air environment with sweeping city views. Ideal
-                        for cocktail receptions and summer galas, featuring modular lounge seating and private bar
-                        service.</p>
+                    <span class="label-accent">The Moonlight Pavilion</span>
+                    <h2 class="feature-title">A serene garden escape for romantic and intimate celebrations.</h2>
+                    <p class="feature-description">A lush, manicured garden space surrounded by seasonal blooms and fairy lights. Best suited for engagement parties, intimate nikah ceremonies, or sophisticated high-tea events.</p>
                     <div class="feature-meta">
                         <div class="meta-item">
                             <span class="meta-label">Capacity</span>
-                            <span class="meta-value">60 Guests</span>
+                            <span class="meta-value">45 Guests</span>
                         </div>
                         <div class="meta-item">
                             <span class="meta-label">Setting</span>
-                            <span class="meta-value">Reception / Lounge</span>
+                            <span class="meta-value">Garden / Semi-Formal</span>
                         </div>
                     </div>
                     <button class="btn-outline">Request Space</button>
@@ -1031,7 +1051,7 @@
                     <span class="label-accent">Archive</span>
                     <h2 class="feature-title" style="font-weight: 700; margin-bottom: 0;">Moments Captured</h2>
                 </div>
-                <a class="view-all" href="#">View Full Gallery</a>
+                <a class="view-all" href="gallery.html">View Full Gallery</a>
             </div>
             <div class="gallery-scroller">
                 <div class="gallery-item gallery-item-md">
@@ -1061,26 +1081,47 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer-brand">
+  <footer class="site-footer">
+        <div class="footer-info">
             <div class="footer-logo">The Bespoke Gastronomy</div>
-            <p class="footer-tagline">Dedicated to the art of fine dining and the orchestration of exceptional moments.
-            </p>
+            <address>
+                1244 Culinary Row, Mayfair, London, UK<br />
+                reservations@thebespoke.com<br />
+                +44 20 7946 0128
+            </address>
         </div>
-        <div class="footer-nav">
-            <div class="footer-col">
-                <span class="footer-label">Legal</span>
-                <a class="footer-link" href="#">Privacy Policy</a>
-                <a class="footer-link" href="#">Terms of Service</a>
+        <div class="footer-nav-group">
+            <div class="nav-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservations</a></li>
+                    <li><a href="#">Private Events</a></li>
+                </ul>
             </div>
-            <div class="footer-col">
-                <span class="footer-label">Social</span>
-                <a class="footer-link underline" href="#">Instagram</a>
-                <a class="footer-link" href="#">Facebook</a>
+            <div class="nav-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="nav-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
             </div>
         </div>
-        <div class="copyright">
-            © 2024 The Bespoke Gastronomy. All rights reserved.
+        <div class="footer-copyright">
+            <div>© 2026 The Bespoke Gastronomy. All rights reserved.</div>
+            <div class="footer-icons">
+                <span class="material-symbols-outlined">ac_unit</span>
+                <span class="material-symbols-outlined">filter_vintage</span>
+                <span class="material-symbols-outlined">auto_awesome</span>
+            </div>
         </div>
     </footer>
 </body>
