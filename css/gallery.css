@@ -321,6 +321,7 @@
             background-color: var(--color-surface-container-low);
             position: relative;
         }
+    
 
         @media (max-width: 480px) {
             .gallery-grid {
