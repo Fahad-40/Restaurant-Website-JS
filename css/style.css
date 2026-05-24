@@ -526,6 +526,13 @@
             margin-right: auto;
         }
 
+        @media (max-width: 768px) {
+             .cta-title {
+            font-size: clamp(1.5rem, 8.7vw, 4rem);
+           
+        }
+        }
+
         .btn-gold btn-cta {
             padding: 1.5rem 4rem;
             font-size: 1rem;
