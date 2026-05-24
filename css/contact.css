@@ -1,4 +1,4 @@
-      :root {
+    :root {
             --color-background: #131313;
             --color-surface: #1c1b1b;
             --color-primary: #f1c97d;
@@ -332,6 +332,54 @@
 
         .info-column {
             grid-column: span 5;
+        
+        }
+   .form-column {
+            grid-column: span 7;
+          
+        }
+
+   @media (max-width: 724px) {
+            .info-column {
+            grid-column: span 5;
+            width: 70%;
+            margin: 0 auto;
+        }
+   .form-column {
+            grid-column: span 7;
+            width: 70%;
+            /* margin: 0 auto; */
+        }
+
+        }
+   @media (max-width: 700px) {
+            .info-column {
+            grid-column: span 5;
+            width: 70%;
+            margin: 0 auto;
+        }
+   .form-column {
+            grid-column: span 7;
+            width: 70%;
+            /* margin: 0 auto; */
+        }
+
+        }
+
+   @media (max-width: 600px) {
+            .info-column {
+            grid-column: span 5;
+            width: 60%;
+            margin: 0 auto;
+            margin-left: 1%;
+        }
+   .form-column {
+            grid-column: span 7;
+            width: 70%;
+            /* margin: 0 auto; */
+           
+        }
+
         }
 
         @media (max-width: 1024px) {
@@ -342,6 +390,31 @@
 
         .form-column {
             grid-column: span 7;
+            /* margin: 0 auto; */
+        }
+          @media (max-width: 724px) {
+        .form-column {
+            grid-column: span 7;
+            width: 70%;
+            /* margin: 0 auto; */
+              margin: 0 auto;
+              margin-left: 10%;
+        }
+        }
+
+        @media (max-width: 1024px) {
+            .form-column {
+                grid-column: span 12;
+            }
+        }
+          @media (max-width: 600px) {
+        .form-column {
+            grid-column: span 7;
+            width: 70%;
+            /* margin: 0 auto; */
+              margin: 0 auto;
+              margin-left: -1%;
+        }
         }
 
         @media (max-width: 1024px) {
@@ -356,8 +429,17 @@
             flex-direction: column;
             gap: 3rem;
             margin-bottom: 4rem;
+          
         }
-
+  @media (max-width: 724px) {
+          .contact-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            width:90%;
+        }
+        }
         .label-tiny {
             font-size: 10px;
             color: var(--color-primary);
@@ -416,12 +498,48 @@
             background-color: var(--color-surface);
             overflow: hidden;
         }
-
+iframe{
+    width:600px;
+     height:490px;
+}
         .map-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
             filter: grayscale(1) brightness(0.5) contrast(1.25);
+        }
+  @media (max-width: 520px) {
+             .map-container {
+            /* position: relative; */
+            /* aspect-ratio: 1 / 1; */
+            background-color: var(--color-surface);
+            overflow: hidden;
+            width: 300rem;
+            height: 25rem;
+            border: 1px solid yellow;
+            margin: 0 auto;
+             }
+             iframe{
+    width:400px;
+     height:490px;
+}
+        }
+
+  @media (max-width: 400px) {
+             .map-container {
+            /* position: relative; */
+            /* aspect-ratio: 1 / 1; */
+            background-color: var(--color-surface);
+            overflow: hidden;
+            width: 300rem;
+            height: 25rem;
+            border: 1px solid green;
+            margin: 0 auto;
+             }
+             iframe{
+    width:300px;
+     height:490px;
+}
         }
   @media (max-width: 768px) {
              .map-container {
@@ -436,6 +554,7 @@
             
         }
         }
+ 
         .map-pin {
             position: absolute;
             top: 50%;
