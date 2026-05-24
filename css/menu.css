@@ -660,7 +660,7 @@
         @media (max-width: 500px) {
             .dish-card-img {
         
-                 height: 200px;
+                 height: 100%;
             }
         }
 
