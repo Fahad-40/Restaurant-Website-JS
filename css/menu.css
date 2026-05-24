@@ -657,6 +657,12 @@
             position: relative;
             height: 200px;
         }
+        @media (max-width: 500px) {
+            .dish-card-img {
+        
+                 height: 200px;
+            }
+        }
 
         .dish-card-img img {
             width: 100%;
