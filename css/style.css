@@ -214,12 +214,17 @@
             gap: 1.5rem;
             justify-content: center;
         }
-        
-        .hero-actions {
+        @media (max-width: 570px) {
+ .hero-actions {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
         }
+        }
+       
 
         .scroll-indicator {
             position: absolute;
