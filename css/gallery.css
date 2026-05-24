@@ -21,6 +21,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            /* border: 1px solid red; */
         }
 
         body {
@@ -419,6 +420,13 @@
             overflow: hidden;
             background-color: var(--color-surface-container-low);
             position: relative;
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: repeat(12, 1fr);
+                gap: 1.5rem;
+            }
         }
 
         .gallery-item img {
