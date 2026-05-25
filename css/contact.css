@@ -417,7 +417,17 @@
     @media (max-width: 584px) {
         .form-column {
             grid-column: span 7;
-            max-width: 60%;
+            max-width: 25rem;
+            /* margin: 0 auto; */
+            margin: 0 auto;
+            margin-left: -1%;
+
+        }
+    }   
+    @media (max-width: 454px) {
+        .form-column {
+            grid-column: span 7;
+            max-width: 23rem;
             /* margin: 0 auto; */
             margin: 0 auto;
             margin-left: -1%;
