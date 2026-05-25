@@ -379,7 +379,7 @@
     @media (max-width: 470px) {
         .info-column {
             grid-column: span 5;
-            max-width: 20rem;
+            max-width: 15rem;
             margin: 0 auto;
             margin-left: 1%;
         }
