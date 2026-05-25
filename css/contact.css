@@ -571,7 +571,7 @@
             overflow: hidden;
             width: 100%;
             height: 25rem;
-            border: 1px solid green;
+            /* border: 1px solid green; */
             margin: 0 auto;
         }
 
