@@ -15,7 +15,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     body {
@@ -378,7 +378,7 @@
             /* grid-column: span 7; */
    width: 60%;
             /* margin: 0 auto; */
-            border: 1px solid red;
+            /* border: 1px solid red; */
 /* margin-left: -50%; */
 
         }
@@ -558,7 +558,7 @@
         }
 
         iframe {
-            width: 400px;
+            width: 25rem;
             height: 490px;
         }
     }
@@ -576,7 +576,7 @@
         }
 
         iframe {
-            width: 300px;
+            max-width: 100%;
             height: 490px;
         }
     }
