@@ -196,49 +196,233 @@ const menuData = [
     },
 
     // category 4 : GRILLS & BBQ (Total: 6)
+      // category 4 : GRILLS & BBQ (Continued)
     {
         id: "grills",
         title: "Grills & BBQ",
         note: "Flame-grilled perfection with premium seasoned woods",
         items: [
+            // Previous items remain here...
             {
-                name: "A5 Wagyu Strip Steak",
-                price: 290,
-                desc: "Authentic Japanese beef grilled over binchotan charcoal, pink Himalayan salt",
-                badge: { text: "Rare", type: "badge-chef" },
+                name: "Charcoal Grilled Asparagus & Halloumi",
+                price: 95,
+                desc: "Thick blocks of Cypriot halloumi cheese and fresh asparagus glazed with herb oil",
+                badge: { text: "Vegetarian", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            }
+        ]
+    },
+
+    // category 5 : SIDES
+    {
+        id: "sides",
+        title: "Sides",
+        note: "Perfect accompaniments to elevate your main meal",
+        items: [
+            {
+                name: "Parmesan Truffle Fries",
+                price: 35,
+                desc: "Thick-cut potatoes tossed in truffle oil, grated parmesan, fresh parsley",
+                badge: { text: "Classic", type: "badge-popular" },
                 img: "Assets/Images/Home/recipe2.png",
                 quantity: 1
             },
             {
-                name: "Smoked Tomahawk Ribeye",
-                price: 240,
-                desc: "Dry-aged steak smoked with hickory wood, served with bone marrow butter",
-                badge: { text: "For Two", type: "badge-popular" },
+                name: "Creamed Wild Spinach",
+                price: 30,
+                desc: "Baby spinach cooked with rich mascarpone cheese and a hint of nutmeg",
+                badge: { text: "Vegetarian", type: "badge-veg" },
                 img: "Assets/Images/Home/recipe2.png",
                 quantity: 1
             },
             {
-                name: "Glazed Octopus Tentacles",
-                price: 165,
-                desc: "Charred Mediterranean octopus, sweet smoky glaze, citrus herb salad",
+                name: "Charred Broccolini",
+                price: 28,
+                desc: "Tender broccolini florets flash-grilled with garlic confit and toasted almonds",
+                badge: { text: "Vegetarian", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Lobster Mac & Cheese",
+                price: 55,
+                desc: "Gourmet pasta baked in a five-cheese blend sauce with generous chunks of fresh lobster",
+                badge: { text: "Elite", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Honey-Glazed Heirloom Carrots",
+                price: 25,
+                desc: "Baby rainbow carrots roasted with organic honey and fresh thyme sprigs",
+                badge: { text: "Vegetarian", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            }
+        ]
+    },
+
+    // category 6 : SPECIALS
+    {
+        id: "specials",
+        title: "Specials",
+        note: "Exquisite culinary creations available for a limited time",
+        items: [
+            {
+                name: "Gold-Leaf Tomahawk",
+                price: 450,
+                desc: "Prime 1.2kg steak wrapped entirely in 24-karat edible gold leaf",
+                badge: { text: "Royal Choice", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "The Ocean Platter",
+                price: 380,
+                desc: "Whole king crab legs, oysters, grilled lobster tail, served with garlic herb butter",
+                badge: { text: "Chef's Special", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "White Truffle Risotto",
+                price: 210,
+                desc: "Aged Acquerello rice simmered slowly, topped with freshly shaved Alba white truffles",
+                badge: { text: "Seasonal Exclusive", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Imperial Peking Duck",
+                price: 295,
+                desc: "Perfectly crisp-skinned duck carved table-side, served with thin pancakes and hoisin",
+                badge: { text: "Masterpiece", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Saffron Bouillabaisse",
+                price: 185,
+                desc: "Traditional French fish stew enriched with saffron, prawns, mussels, and cod filet",
+                badge: { text: "Limited Edition", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            }
+        ]
+    },
+
+    // category 7 : DESSERTS
+    {
+        id: "desserts",
+        title: "Desserts",
+        note: "Decadent sweet endings crafted by our pastry chefs",
+        items: [
+            {
+                name: "Deconstructed Tiramisu",
+                price: 45,
+                desc: "Espresso soak sponge, light mascarpone cream, dark chocolate shards",
+                badge: { text: "Elite", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Madagascar Vanilla Crème Brûlée",
+                price: 40,
+                desc: "Rich custard base topped with a texturally contrasting layer of hardened caramelized sugar",
+                badge: { text: "Classic", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Golden Chocolate Dome",
+                price: 60,
+                desc: "Valrhona chocolate shell melted table-side with hot salted caramel sauce",
+                badge: { text: "Must Try", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Matcha Lava Cake",
+                price: 38,
+                desc: "Warm Uji matcha cake with a molten white chocolate-matcha filling and black sesame ice cream",
+                badge: { text: "New", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Saffron Pistachio Kulfi Jewel",
+                price: 42,
+                desc: "Traditional dense ice cream flavored with saffron threads, real pistachios, and gold foil flake",
                 badge: { text: "Signature", type: "badge-chef" },
                 img: "Assets/Images/Home/recipe2.png",
                 quantity: 1
             },
-            // Added Item 4
             {
-                name: "New Zealand Lamb Chops",
-                price: 190,
-                desc: "Grass-fed lamb chops crusted with fresh mint, garlic, and grilled over open embers",
-                badge: { text: "Best Seller", type: "badge-popular" },
+                name: "Caviar Champagne Sorbet",
+                price: 55,
+                desc: "Crisp Dom Pérignon champagne sorbet balanced with a delicate string of sweet strawberry caviar pearls",
+                badge: { text: "Artisanal", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            }
+        ]
+    },
+
+    // category 8 : BEVERAGES
+    {
+        id: "beverages",
+        title: "Beverages",
+        note: "Fine mocktails, rare teas, and premium artisanal drinks",
+        items: [
+            {
+                name: "Smoked Rosemary Mocktail",
+                price: 25,
+                desc: "Fresh muddled berries, citrus juice, topped with a smoking sprig of rosemary",
+                badge: { text: "Trending", type: "badge-popular" },
                 img: "Assets/Images/Home/recipe2.png",
                 quantity: 1
             },
-            // Added Item 5
             {
-                name: "Tandoori Tiger Prawns",
-                price: 155,
-                desc: "Colossal prawns marinated in saffron-infused yogurt spices and roasted in clay oven",
-                badge: { text: "Spicy", type: "badge-chef" },
+                name: "Gold Flake Rose Latte",
+                price: 20,
+                desc: "Artisanal espresso infused with organic rose water and topped with edible gold",
+                badge: { text: "Signature", type: "badge-chef" },
                 img: "Assets/Images/Home/recipe2.png",
-quantity: 1},// Added Item 6{name: "Charcoal Grilled Asparagus & Halloumi",price: 95,desc: "Thick blocks of Cypriot halloumi cheese and fresh asparagus glazed with herb oil",badge: { text: "Vegetarian", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1}]},// category 5 : SIDES (Total: 5){id: "sides",title: "Sides",note: "Perfect accompaniments to elevate your main meal",items: [{name: "Parmesan Truffle Fries",price: 35,desc: "Thick-cut potatoes tossed in truffle oil, grated parmesan, fresh parsley",badge: { text: "Classic", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "Creamed Wild Spinach",price: 30,desc: "Baby spinach cooked with rich mascarpone cheese and a hint of nutmeg",badge: { text: "Vegetarian", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 3{name: "Charred Broccolini",price: 28,desc: "Tender broccolini florets flash-grilled with garlic confit and toasted almonds",badge: { text: "Vegetarian", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 4{name: "Lobster Mac & Cheese",price: 55,desc: "Gourmet pasta baked in a five-cheese blend sauce with generous chunks of fresh lobster",badge: { text: "Elite", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 5{name: "Honey-Glazed Heirloom Carrots",price: 25,desc: "Baby rainbow carrots roasted with organic honey and fresh thyme sprigs",badge: { text: "Vegetarian", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1}]},// category 6 : SPECIALS (Total: 5){id: "specials",title: "Specials",note: "Exquisite culinary creations available for a limited time",items: [{name: "Gold-Leaf Tomahawk",price: 450,desc: "Prime 1.2kg steak wrapped entirely in 24-karat edible gold leaf",badge: { text: "Royal Choice", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "The Ocean Platter",price: 380,desc: "Whole king crab legs, oysters, grilled lobster tail, served with garlic herb butter",badge: { text: "Chef's Special", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 3{name: "White Truffle Risotto",price: 210,desc: "Aged Acquerello rice simmered slowly, topped with freshly shaved Alba white truffles",badge: { text: "Seasonal Exclusive", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 4{name: "Imperial Peking Duck",price: 295,desc: "Perfectly crisp-skinned duck carved table-side, served with thin pancakes and hoisin",badge: { text: "Masterpiece", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 5{name: "Saffron Bouillabaisse",price: 185,desc: "Traditional French fish stew enriched with saffron, prawns, mussels, and cod filet",badge: { text: "Limited Edition", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1}]},// category 7 : DESSERTS (Total: 6){id: "desserts",title: "Desserts",note: "Decadent sweet endings crafted by our pastry chefs",items: [{name: "Deconstructed Tiramisu",price: 45,desc: "Espresso soak sponge, light mascarpone cream, dark chocolate shards",badge: { text: "Elite", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "Madagascar Vanilla Crème Brûlée",price: 40,desc: "Rich custard base topped with a texturally contrasting layer of hardened caramelized sugar",badge: { text: "Classic", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "Golden Chocolate Dome",price: 60,desc: "Valrhona chocolate shell melted table-side with hot salted caramel sauce",badge: { text: "Must Try", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 4{name: "Matcha Lava Cake",price: 38,desc: "Warm Uji matcha cake with a molten white chocolate-matcha filling and black sesame ice cream",badge: { text: "New", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 5{name: "Saffron Pistachio Kulfi Jewel",price: 42,desc: "Traditional dense ice cream flavored with saffron threads, real pistachios, and gold foil flake",badge: { text: "Signature", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 6{name: "Caviar Champagne Sorbet",price: 55,desc: "Crisp Dom Pérignon champagne sorbet balanced with a delicate string of sweet strawberry caviar pearls",badge: { text: "Artisanal", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1}]},// category 8 : BEVERAGES (Total: 6){id: "beverages",title: "Beverages",note: "Fine mocktails, rare teas, and premium artisanal drinks",items: [{name: "Smoked Rosemary Mocktail",price: 25,desc: "Fresh muddled berries, citrus juice, topped with a smoking sprig of rosemary",badge: { text: "Trending", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "Gold Flake Rose Latte",price: 20,desc: "Artisanal espresso infused with organic rose water and topped with edible gold",badge: { text: "Signature", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},{name: "Sparkling Elderflower Infusion",price: 22,desc: "Light, floral elderflower cordial mixed with sparkling premium spring water",badge: { text: "Refreshing", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 4{name: "Yuzu Mint Cooler",price: 18,desc: "Exotic Japanese yuzu juice shaken with fresh crushed mint and wild honey ginger syrup",badge: { text: "Seasonal", type: "badge-popular" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 5{name: "Blue Butterfly Pea Flower Tea",price: 24,desc: "Vibrant blue organic floral tea that shifts color beautifully to violet with a squeeze of fresh lemon juice",badge: { text: "Exclusive", type: "badge-chef" },img: "Assets/Images/Home/recipe2.png",quantity: 1},// Added Item 6{name: "Activated Charcoal Elixir",price: 26,desc: "Detoxifying food-grade charcoal blended smoothly with pressed cold lavender and fresh lemonade",badge: { text: "Healthy", type: "badge-veg" },img: "Assets/Images/Home/recipe2.png",quantity: 1}]}];
+                quantity: 1
+            },
+            {
+                name: "Sparkling Elderflower Infusion",
+                price: 22,
+                desc: "Light, floral elderflower cordial mixed with sparkling premium spring water",
+                badge: { text: "Refreshing", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Yuzu Mint Cooler",
+                price: 18,
+                desc: "Exotic Japanese yuzu juice shaken with fresh crushed mint and wild honey ginger syrup",
+                badge: { text: "Seasonal", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Blue Butterfly Pea Flower Tea",
+                price: 24,
+                desc: "Vibrant blue organic floral tea that shifts color beautifully to violet with a squeeze of fresh lemon juice",
+                badge: { text: "Exclusive", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Activated Charcoal Elixir",
+                price: 26,
+                desc: "Detoxifying food-grade charcoal blended smoothly with pressed cold lavender and fresh lemonade",
+                badge: { text: "Healthy", type: "badge-veg" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            }
+        ]
+    }
+];
