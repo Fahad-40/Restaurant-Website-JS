@@ -569,14 +569,14 @@
             /* aspect-ratio: 1 / 1; */
             background-color: var(--color-surface);
             overflow: hidden;
-            max-width: 100%;
+            width: 95rem;
             height: 25rem;
             border: 1px solid green;
             margin: 0 auto;
         }
 
         iframe {
-            max-width: 100%;
+            width: 95rem;
             height: 490px;
         }
     }
