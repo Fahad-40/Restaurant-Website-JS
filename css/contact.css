@@ -368,20 +368,23 @@
             margin-left: 1%;
         }
 
-        .form-column {
-            grid-column: span 7;
-            max-width: 70%;
-            /* margin: 0 auto; */
-
-        }
+      
 
     }
     @media (max-width: 470px) {
         .info-column {
             grid-column: span 5;
-            max-width: 15rem;
+            max-width: 20rem;
             margin: 0 auto;
-            margin-left: 1%;
+            margin-left: -1%;
+        }
+         .form-column {
+            /* grid-column: span 7; */
+            width: 5rem;
+            /* margin: 0 auto; */
+            border: 1px solid red;
+margin-left: -50%;
+
         }
     }
 
