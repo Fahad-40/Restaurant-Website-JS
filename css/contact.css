@@ -354,7 +354,7 @@
 
         .form-column {
             grid-column: span 7;
-            width: 70%;
+            max-width: 70%;
             /* margin: 0 auto; */
         }
 
@@ -370,7 +370,7 @@
 
         .form-column {
             grid-column: span 7;
-            width: 70%;
+            max-width: 70%;
             /* margin: 0 auto; */
 
         }
@@ -391,7 +391,7 @@
     @media (max-width: 724px) {
         .form-column {
             grid-column: span 7;
-            width: 70%;
+            max-width: 70%;
             /* margin: 0 auto; */
             margin: 0 auto;
             margin-left: 10%;
@@ -417,7 +417,7 @@
     @media (max-width: 584px) {
         .form-column {
             grid-column: span 7;
-            max-width: 60%;
+        max-width: 60%;
             /* margin: 0 auto; */
             margin: 0 auto;
             margin-left: -1%;
