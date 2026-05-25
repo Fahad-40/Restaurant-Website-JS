@@ -333,6 +333,8 @@
             grid-column: span 5;
             width: 70%;
             margin: 0 auto;
+          
+            /* border: 1px solid green */
         }
 
         .form-column {
@@ -528,6 +530,7 @@
             height: 25rem;
             border: 1px solid yellow;
             /* margin: 0 auto; */
+           
         }
 
         iframe {
@@ -544,7 +547,7 @@
             overflow: hidden;
             width: 300px;
             height: 25rem;
-            border: 1px solid green;
+            /* border: 1px solid green; */
             margin: 0 auto;
         }
 
@@ -560,11 +563,11 @@
             /* aspect-ratio: 1 / 1; */
             background-color: var(--color-surface);
             overflow: hidden;
-            width: 30rem;
+            max-width: 23rem;
             height: 30rem;
-            border: 1px solid red;
+            /* border: 1px solid red; */
             margin: 0 auto;
-
+ margin-left: -1%;
         }
     }
 
@@ -585,7 +588,9 @@
         padding: 3rem;
         margin-bottom: 5rem;
     }
-
+/* @media (max-width: 768px) {
+    
+    } */
     .section-title {
         font-family: var(--font-headline);
         font-size: 1.875rem;
