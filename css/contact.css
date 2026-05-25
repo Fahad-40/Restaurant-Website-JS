@@ -15,7 +15,7 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        /* border: 1px solid red; */
+        border: 1px solid red;
     }
 
     body {
@@ -391,6 +391,7 @@ margin-left: -50%;
         padding: 1rem;
         margin-bottom: 5rem;
     }
+   
     }
 
     @media (max-width: 1024px) {
