@@ -571,7 +571,7 @@
             overflow: hidden;
             max-width: 100%;
             height: 25rem;
-            /* border: 1px solid green; */
+            border: 1px solid green;
             margin: 0 auto;
         }
 
@@ -592,6 +592,10 @@
             /* border: 1px solid red; */
             margin: 0 auto;
             margin-left: -1%;
+        }
+             iframe {
+            max-width: 100%;
+            height: 490px;
         }
     }
 
