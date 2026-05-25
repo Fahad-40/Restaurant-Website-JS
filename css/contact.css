@@ -333,7 +333,7 @@
             grid-column: span 5;
             width: 70%;
             margin: 0 auto;
-          
+
             /* border: 1px solid green */
         }
 
@@ -417,11 +417,11 @@
     @media (max-width: 584px) {
         .form-column {
             grid-column: span 7;
-        max-width: 60%;
+            max-width: 60%;
             /* margin: 0 auto; */
             margin: 0 auto;
             margin-left: -1%;
-            
+
         }
     }
 
@@ -525,13 +525,13 @@
         .map-container {
             position: relative;
             background-color: var(--color-surface);
-       
+
             overflow: hidden;
-            width:100%;
+            width: 100%;
             height: 25rem;
             border: 1px solid yellow;
             /* margin: 0 auto; */
-           
+
         }
 
         iframe {
@@ -564,11 +564,11 @@
             /* aspect-ratio: 1 / 1; */
             background-color: var(--color-surface);
             overflow: hidden;
-             max-width: 70%;
+            max-width: 70%;
             height: 30rem;
             /* border: 1px solid red; */
             margin: 0 auto;
- margin-left: -1%;
+            margin-left: -1%;
         }
     }
 
