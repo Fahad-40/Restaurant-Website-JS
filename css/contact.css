@@ -386,6 +386,11 @@
 margin-left: -50%;
 
         }
+         .form-section {
+        background-color: var(--color-surface);
+        padding: 1rem;
+        margin-bottom: 5rem;
+    }
     }
 
     @media (max-width: 1024px) {
@@ -567,7 +572,7 @@ margin-left: -50%;
             /* aspect-ratio: 1 / 1; */
             background-color: var(--color-surface);
             overflow: hidden;
-            max-width: 70%;
+            max-width: 100%;
             height: 25rem;
             /* border: 1px solid green; */
             margin: 0 auto;
