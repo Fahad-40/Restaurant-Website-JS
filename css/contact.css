@@ -98,10 +98,6 @@
         opacity: 0.8;
     }
 
-
-
-
-
     /* ── ROOT VARIABLES ── */
     :root {
         --color-bg: #131313;
@@ -380,10 +376,10 @@
         }
          .form-column {
             /* grid-column: span 7; */
-            width: 5rem;
+   width: 60%;
             /* margin: 0 auto; */
             border: 1px solid red;
-margin-left: -50%;
+/* margin-left: -50%; */
 
         }
          .form-section {
@@ -434,17 +430,17 @@ margin-left: -50%;
     @media (max-width: 584px) {
         .form-column {
             grid-column: span 7;
-            max-width: 25rem;
+            max-width: 20rem;
             /* margin: 0 auto; */
-            margin: 0 auto;
-            margin-left: -1%;
+            /* margin: 0 auto; */
+            /* margin-left: -1%; */
 
         }
     }   
     @media (max-width: 454px) {
         .form-column {
             grid-column: span 7;
-            max-width: 23rem;
+       width: 60%;
             /* margin: 0 auto; */
             margin: 0 auto;
             margin-left: -1%;
@@ -554,7 +550,7 @@ margin-left: -50%;
             background-color: var(--color-surface);
 
             overflow: hidden;
-            width: 100%;
+            width:25rem;
             height: 25rem;
             border: 1px solid yellow;
             /* margin: 0 auto; */
