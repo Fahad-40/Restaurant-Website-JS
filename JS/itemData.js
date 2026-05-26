@@ -208,7 +208,7 @@ const menuData = [
                 price: 290,
                 desc: "Authentic Japanese beef grilled over binchotan charcoal, pink Himalayan salt",
                 badge: { text: "Rare", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/1.A5-Wagyu.jpg",
                 quantity: 1
             },
             {
@@ -216,7 +216,7 @@ const menuData = [
                 price: 240,
                 desc: "Dry-aged steak smoked with hickory wood, served with bone marrow butter",
                 badge: { text: "For Two", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/2.Smoked-Tomahawk.jpg",
                 quantity: 1
             },
             {
@@ -224,7 +224,7 @@ const menuData = [
                 price: 165,
                 desc: "Charred Mediterranean octopus, sweet smoky glaze, citrus herb salad",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/3.Glazed-Octopus.jpg",
                 quantity: 1
             },
             // Added Item 4
@@ -233,7 +233,7 @@ const menuData = [
                 price: 190,
                 desc: "Grass-fed lamb chops crusted with fresh mint, garlic, and grilled over open embers",
                 badge: { text: "Best Seller", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/4.New-Zealand-Lamb.jpg",
                 quantity: 1
             },
             // Added Item 5
@@ -242,7 +242,7 @@ const menuData = [
                 price: 155,
                 desc: "Colossal prawns marinated in saffron-infused yogurt spices and roasted in clay oven",
                 badge: { text: "Spicy", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/5.Tandoori-Tiger.jpg",
 quantity: 1
 },
             {
@@ -250,7 +250,7 @@ quantity: 1
                 price: 95,
                 desc: "Thick blocks of Cypriot halloumi cheese and fresh asparagus glazed with herb oil",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/grills and bar b q/6.Charcoal-Grilled-Asparagus.jpg",
                 quantity: 1
             }
         ]
