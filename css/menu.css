@@ -1,4 +1,4 @@
-        /* ── ROOT VARIABLES ── */
+            /* ── ROOT VARIABLES ── */
         :root {
             --color-bg: #131313;
             --color-surface: #201f1f;
@@ -256,10 +256,10 @@
 
         .cart-drawer {
             position: fixed;
-            top: 0;
-            right: -100%;
+            top: 15%;
+            right: -200%;
             width: var(--drawer-width);
-            height: 100%;
+            height: 85%;
             background: var(--color-bg);
             z-index: 1200;
             display: flex;
