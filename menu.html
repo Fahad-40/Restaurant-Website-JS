@@ -16,6 +16,8 @@
 
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/style.css">
+
+   
 </head>
 
 <body>
@@ -35,11 +37,11 @@
         <a href="reservation.html"><button class="btn-gold">Book a Table</button></a>
     </header> -->
 
-   <header class="site-header">
+    <header class="site-header">
         <div class="logo">The Bespoke Gastronomy</div>
         <nav class="nav-links">
-            <a class="active" href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
+            <a href="index.html">Home</a>
+            <a class="active" href="menu.html">Menu</a>
             <a href="reservation.html">Reservations</a>
             <a href="gallery.html">Gallery</a>
             <a href="events.html">Events</a>
@@ -54,7 +56,7 @@
             <span></span>
         </button>
     </header>
-    
+
     <div class="mobile-menu-overlay" id="mobile-menu-overlay">
         <nav class="mobile-nav-links">
             <a href="index.html">Home</a>
@@ -74,31 +76,35 @@
         <span class="basket-count">0</span>
     </button>
     <!-- ═══════════════ SIDE CART DRAWER ═══════════════ -->
-<div class="cart-overlay" id="cart-overlay"></div>
-<aside class="cart-drawer" id="cart-drawer">
-<div class="cart-header">
-<h2>Your Selection</h2>
-<button aria-label="Close cart" class="cart-close" id="cart-close">
-<span class="material-symbols-outlined">close</span>
-</button>
-</div>
-<div class="cart-body">
-<!-- Empty State -->
-<div class="cart-empty" id="cart-empty">
-<span class="material-symbols-outlined">shopping_basket</span>
-<p>Your selection is currently empty</p>
-</div>
-<div id="cart-items-container">
-<!-- Cart items would be injected here -->
-</div>
-</div>
-<div class="cart-footer">
-<button class="review-btn"><a href="checkout.html">Review Selection →</a></button>
-</div>
-</aside>
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button aria-label="Close cart" class="cart-close" id="cart-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="cart-body">
+            <!-- Empty State -->
+            <div class="cart-empty" id="cart-empty">
+                <span class="material-symbols-outlined">shopping_basket</span>
+                <p>Your selection is currently empty</p>
+            </div>
+            <div id="cart-items-container">
+                <!-- Cart items would be injected here -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <button class="review-btn"><a href="checkout.html">Review Selection →</a></button>
+        </div>
+    </aside>
     <!-- ═══════════════ MENU PAGE ═══════════════ -->
     <div class="menu-page">
         <aside class="sidebar">
+            <button aria-label="Close Categories" class="sidebar-close-mobile" id="mobile-sidebar-close">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <br>
             <div class="sidebar-search">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewbox="0 0 24 24">
@@ -122,24 +128,28 @@
 
 
         <main class="menu-content">
+            
             <h1 class="menu-page-title">Our Menu</h1>
             <p class="menu-page-sub">Crafted with passion · Served with elegance</p>
-
+<button class="mobile-category-toggle" id="mobile-sidebar-open">
+                <span class="material-symbols-outlined">menu_open</span>
+                Categories
+            </button>
             <!-- STARTERS -->
-        
+
             <!-- SOUPS & SALADS -->
-          
+
             <!-- MAIN COURSE -->
-   
-            
+
+
         </main>
-        
+
     </div>
 
 
-<script src="JS/itemData.js"></script>
-<script src="JS/cart.js"></script>
-<script src="JS/renderItems.js"></script>
+    <script src="JS/itemData.js"></script>
+    <script src="JS/cart.js"></script>
+    <script src="JS/renderItems.js"></script>
 
     <!-- ═══════════════ JAVASCRIPT ═══════════════ -->
     <script>
@@ -160,7 +170,7 @@
         cartOverlay.addEventListener('click', toggleCart);
 
         // --- Scroll Spy & Sidebar Logic ---
-       
+
 
         // --- Search Logic ---
         const searchInput = document.getElementById('menu-search');
@@ -179,50 +189,72 @@
         });
 
 
-    // const mobileToggle = document.getElementById('mobile-toggle');
-    // const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    // const body = document.body;
+        // const mobileToggle = document.getElementById('mobile-toggle');
+        // const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        // const body = document.body;
 
-    // mobileToggle.addEventListener('click', () => {
-    //     mobileToggle.classList.toggle('active');
-    //     mobileMenuOverlay.classList.toggle('active');
-    //     body.classList.toggle('menu-open');
-    // });
+        // mobileToggle.addEventListener('click', () => {
+        //     mobileToggle.classList.toggle('active');
+        //     mobileMenuOverlay.classList.toggle('active');
+        //     body.classList.toggle('menu-open');
+        // });
 
-    // // Close menu on link click
-    // const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-    // mobileLinks.forEach(link => {
-    //     link.addEventListener('click', () => {
-    //         mobileToggle.classList.remove('active');
-    //         mobileMenuOverlay.classList.remove('active');
-    //         body.classList.remove('menu-open');
-    //     });
-    // });
+        // // Close menu on link click
+        // const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        // mobileLinks.forEach(link => {
+        //     link.addEventListener('click', () => {
+        //         mobileToggle.classList.remove('active');
+        //         mobileMenuOverlay.classList.remove('active');
+        //         body.classList.remove('menu-open');
+        //     });
+        // });
 
- 
-   
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const body = document.body;
 
-    mobileToggle.addEventListener('click', () => {
-        mobileToggle.classList.toggle('active');
-        mobileMenuOverlay.classList.toggle('active');
-        body.classList.toggle('menu-open');
-    });
 
-    // Close menu on link click
-    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
-            mobileMenuOverlay.classList.remove('active');
-            body.classList.remove('menu-open');
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            mobileMenuOverlay.classList.toggle('active');
+            body.classList.toggle('menu-open');
         });
-    });
-         
+
+        // Close menu on link click
+        const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileToggle.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.querySelector('.sidebar');
+            const openBtn = document.getElementById('mobile-sidebar-open');
+            const closeBtn = document.getElementById('mobile-sidebar-close');
+
+            const toggleSidebar = () => {
+                sidebar.classList.toggle('active');
+            };
+
+            if (openBtn) openBtn.addEventListener('click', toggleSidebar);
+            if (closeBtn) closeBtn.addEventListener('click', toggleSidebar);
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', (e) => {
+                if (window.innerWidth <= 900 && sidebar.classList.contains('active')) {
+                    if (!sidebar.contains(e.target) && !openBtn.contains(e.target)) {
+                        sidebar.classList.remove('active');
+                    }
+                }
+            });
+        });
+
     </script>
 
-    </body>
+</body>
 
 </html>
