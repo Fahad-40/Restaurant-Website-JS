@@ -204,6 +204,48 @@ const menuData = [
         items: [
             // Previous items remain here...
             {
+                name: "A5 Wagyu Strip Steak",
+                price: 290,
+                desc: "Authentic Japanese beef grilled over binchotan charcoal, pink Himalayan salt",
+                badge: { text: "Rare", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Smoked Tomahawk Ribeye",
+                price: 240,
+                desc: "Dry-aged steak smoked with hickory wood, served with bone marrow butter",
+                badge: { text: "For Two", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            {
+                name: "Glazed Octopus Tentacles",
+                price: 165,
+                desc: "Charred Mediterranean octopus, sweet smoky glaze, citrus herb salad",
+                badge: { text: "Signature", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            // Added Item 4
+            {
+                name: "New Zealand Lamb Chops",
+                price: 190,
+                desc: "Grass-fed lamb chops crusted with fresh mint, garlic, and grilled over open embers",
+                badge: { text: "Best Seller", type: "badge-popular" },
+                img: "Assets/Images/Home/recipe2.png",
+                quantity: 1
+            },
+            // Added Item 5
+            {
+                name: "Tandoori Tiger Prawns",
+                price: 155,
+                desc: "Colossal prawns marinated in saffron-infused yogurt spices and roasted in clay oven",
+                badge: { text: "Spicy", type: "badge-chef" },
+                img: "Assets/Images/Home/recipe2.png",
+quantity: 1
+},
+            {
                 name: "Charcoal Grilled Asparagus & Halloumi",
                 price: 95,
                 desc: "Thick blocks of Cypriot halloumi cheese and fresh asparagus glazed with herb oil",
