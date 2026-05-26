@@ -138,7 +138,7 @@ const menuData = [
                 price: 185,
                 desc: "Prime beef tenderloin, creamy truffle mashed potatoes, red wine jus",
                 badge: { text: "Best Seller", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Black-Truffle.jpg",
                 quantity: 1
             },
             {
@@ -146,7 +146,7 @@ const menuData = [
                 price: 195,
                 desc: "Served over a bed of asparagus risotto, lemon-butter reduction, edible gold leaf",
                 badge: { text: "New", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Pan-Seared.jpg",
                 quantity: 1
             },
             {
@@ -154,7 +154,7 @@ const menuData = [
                 price: 210,
                 desc: "Tender lamb shank served with fragrant saffron-infused basmati rice",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Slow-Roasted.jpg",
                 quantity: 1
             },
             {
@@ -162,7 +162,7 @@ const menuData = [
                 price: 140,
                 desc: "Handmade pasta tossed in aged parmigiano-reggiano and freshly shaved European truffles",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Black-Truffle.jpg",
                 quantity: 1
             },
             // Added Item 5
@@ -171,7 +171,7 @@ const menuData = [
                 price: 245,
                 desc: "Whole European lobster tail slow-poached in organic butter, vanilla parsnip purée",
                 badge: { text: "Royal Choice", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Butter-Poached.jpg",
                 quantity: 1
             },
             // Added Item 6
@@ -180,7 +180,7 @@ const menuData = [
                 price: 175,
                 desc: "Pan-roasted spiced duck breast, sweet cherry reduction, caramelized endive",
                 badge: { text: "Trending", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Dry-Aged.jpg",
                 quantity: 1
             },
             // Added Item 7
@@ -189,7 +189,7 @@ const menuData = [
                 price: 130,
                 desc: "Flaky puff pastry stuffed with earthy morels, porcini, chestnut paste, and spinach",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/main-course/Wild-Mushroom-Wellington.jpg",
                 quantity: 1
             }
         ]
