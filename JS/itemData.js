@@ -10,7 +10,7 @@ const menuData = [
                 price: 120,
                 desc: "Hand-cut wagyu, quail egg, capers, dijon mustard, toasted brioche",
                 badge: { text: "Chef's Pick", type: "badge-chef" },
-                img: "Assets/Images/Menu/large size/Starters/1.Wagyu-Beef.png",
+                img: "Assets/Images/Menu/Starters/1.Wagyu-Beef.png",
                 quantity: 1
             },
             {
@@ -78,7 +78,7 @@ const menuData = [
                 price: 110,
                 desc: "Velvety lobster broth, cognac cream, poached lobster chunks",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Menu/Salads/Black-Garlic.jpg",
+                img: "Assets/Images/Menu/Salads/Saffron-Lobster.jpg",
                 quantity: 1
             },
             {
@@ -86,7 +86,7 @@ const menuData = [
                 price: 85,
                 desc: "Creamy burrata cheese, seasonal tomatoes, pesto oil, pine nuts",
                 badge: { text: "Elite", type: "badge-veg" },
-                img: "Assets/Images/Menu/Salads/Black-Garlic.jpg",
+                img: "Assets/Images/Menu/Salads/Burrata-&-Heirloom.jpg",
                 quantity: 1
             },
             {
@@ -94,7 +94,7 @@ const menuData = [
                 price: 55,
                 desc: "Rich forest mushroom blend with a touch of truffle and garlic croutons",
                 badge: { text: "Classic", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/Wild-Mushroom.jpg",
                 quantity: 1
             },
             // Added Item 4
@@ -103,7 +103,7 @@ const menuData = [
                 price: 65,
                 desc: "Sweet organic golden beets, artisanal goat cheese mousse, candied walnuts, and citrus glaze",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/Roasted-Gold.jpg",
                 quantity: 1
             },
             // Added Item 5
@@ -112,7 +112,7 @@ const menuData = [
                 price: 95,
                 desc: "Crystal-clear clarified seafood broth infused with lemongrass and Alaskan king crab shreds",
                 badge: { text: "Premium", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/King-Crab.jpg",
                 quantity: 1
             },
             // Added Item 6
@@ -121,7 +121,7 @@ const menuData = [
                 price: 70,
                 desc: "Crispy baby romaine tossed in a house fermented black garlic dressing with parmesan crisps",
                 badge: { text: "Elite", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/Black-Garlic.jpg",
                 quantity: 1
             }
         ]
