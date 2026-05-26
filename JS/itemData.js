@@ -26,7 +26,7 @@ const menuData = [
                 price: 95,
                 desc: "Pan-seared scallops, cauliflower purée, crispy pancetta, herb oil",
                 badge: { text: "Seasonal", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Hokkaido-Scallops.png",
                 quantity: 1
             },
             {
@@ -34,7 +34,7 @@ const menuData = [
                 price: 150,
                 desc: "Osetra caviar served on warm mini pancakes with chive crème fraîche",
                 badge: { text: "Exclusive", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Caviar-Blinis.jpg",
                 quantity: 1
             },
             // Added Item 5
