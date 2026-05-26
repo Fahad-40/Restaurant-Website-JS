@@ -316,7 +316,7 @@ quantity: 1
                 price: 450,
                 desc: "Prime 1.2kg steak wrapped entirely in 24-karat edible gold leaf",
                 badge: { text: "Royal Choice", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Specials/Gold-Leaf Tomahawk.jpg",
                 quantity: 1
             },
             {
@@ -324,7 +324,7 @@ quantity: 1
                 price: 380,
                 desc: "Whole king crab legs, oysters, grilled lobster tail, served with garlic herb butter",
                 badge: { text: "Chef's Special", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Specials/2.The-Ocean-Platter.jpg",
                 quantity: 1
             },
             {
@@ -332,7 +332,7 @@ quantity: 1
                 price: 210,
                 desc: "Aged Acquerello rice simmered slowly, topped with freshly shaved Alba white truffles",
                 badge: { text: "Seasonal Exclusive", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Specials/White-Truffle-Risotto.jpg",
                 quantity: 1
             },
             {
@@ -340,7 +340,7 @@ quantity: 1
                 price: 295,
                 desc: "Perfectly crisp-skinned duck carved table-side, served with thin pancakes and hoisin",
                 badge: { text: "Masterpiece", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Specials/Imperial-Peking-Duck.jpg",
                 quantity: 1
             },
             {
@@ -348,7 +348,7 @@ quantity: 1
                 price: 185,
                 desc: "Traditional French fish stew enriched with saffron, prawns, mussels, and cod filet",
                 badge: { text: "Limited Edition", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Specials/Saffron-Bouillabaisse.jpg",
                 quantity: 1
             }
         ]
@@ -365,7 +365,7 @@ quantity: 1
                 price: 45,
                 desc: "Espresso soak sponge, light mascarpone cream, dark chocolate shards",
                 badge: { text: "Elite", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/1.Deconstructed-Tiramisu.jpg",
                 quantity: 1
             },
             {
@@ -373,7 +373,7 @@ quantity: 1
                 price: 40,
                 desc: "Rich custard base topped with a texturally contrasting layer of hardened caramelized sugar",
                 badge: { text: "Classic", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/2.Madagascar-Vanilla-Crème.jpg",
                 quantity: 1
             },
             {
@@ -381,7 +381,7 @@ quantity: 1
                 price: 60,
                 desc: "Valrhona chocolate shell melted table-side with hot salted caramel sauce",
                 badge: { text: "Must Try", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/3.Golden-Chocolate.jpg",
                 quantity: 1
             },
             {
@@ -389,7 +389,7 @@ quantity: 1
                 price: 38,
                 desc: "Warm Uji matcha cake with a molten white chocolate-matcha filling and black sesame ice cream",
                 badge: { text: "New", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/4.Matcha-Lava-Cake.jpg",
                 quantity: 1
             },
             {
@@ -397,7 +397,7 @@ quantity: 1
                 price: 42,
                 desc: "Traditional dense ice cream flavored with saffron threads, real pistachios, and gold foil flake",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/5.Saffron-Pistachio.jpg",
                 quantity: 1
             },
             {
@@ -405,7 +405,7 @@ quantity: 1
                 price: 55,
                 desc: "Crisp Dom Pérignon champagne sorbet balanced with a delicate string of sweet strawberry caviar pearls",
                 badge: { text: "Artisanal", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Deserts/6.Caviar-Champagne.jpg",
                 quantity: 1
             }
         ]
@@ -422,7 +422,7 @@ quantity: 1
                 price: 25,
                 desc: "Fresh muddled berries, citrus juice, topped with a smoking sprig of rosemary",
                 badge: { text: "Trending", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/1.Smoked-Rosemary.jpg",
                 quantity: 1
             },
             {
@@ -430,7 +430,7 @@ quantity: 1
                 price: 20,
                 desc: "Artisanal espresso infused with organic rose water and topped with edible gold",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/2.Gold-Flake.jpg",
                 quantity: 1
             },
             {
@@ -438,7 +438,7 @@ quantity: 1
                 price: 22,
                 desc: "Light, floral elderflower cordial mixed with sparkling premium spring water",
                 badge: { text: "Refreshing", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/3.Sparkling-Elderflower.jpg",
                 quantity: 1
             },
             {
@@ -446,7 +446,7 @@ quantity: 1
                 price: 18,
                 desc: "Exotic Japanese yuzu juice shaken with fresh crushed mint and wild honey ginger syrup",
                 badge: { text: "Seasonal", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/4.Yuzu-Mint.jpg",
                 quantity: 1
             },
             {
@@ -454,7 +454,7 @@ quantity: 1
                 price: 24,
                 desc: "Vibrant blue organic floral tea that shifts color beautifully to violet with a squeeze of fresh lemon juice",
                 badge: { text: "Exclusive", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/5.Blue-Butterfly.jpg",
                 quantity: 1
             },
             {
@@ -462,7 +462,7 @@ quantity: 1
                 price: 26,
                 desc: "Detoxifying food-grade charcoal blended smoothly with pressed cold lavender and fresh lemonade",
                 badge: { text: "Healthy", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Beverages/6.Activated-Charcoal.jpg",
                 quantity: 1
             }
         ]
