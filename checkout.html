@@ -22,7 +22,7 @@
 
 <body>
        <header class="site-header">
-        <div class="logo">The Bespoke Gastronomy</div>
+    <a href="index.html"> <div class="logo">The Bespoke Gastronomy</div></a>   
         <nav class="nav-links">
             <a href="index.html">Home</a>
             <a class="active" href="menu.html">Menu</a>
@@ -269,10 +269,29 @@ renderOrderSummary()
             });
 
             // Checkout Logic - Updated to ensure orderTime is set
+        });
+        
+         const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const body = document.body;
 
+    mobileToggle.addEventListener('click', () => {
+        mobileToggle.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
+        body.classList.toggle('menu-open');
+    });
 
-
-        });</script>
+    // Close menu on link click
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        });
+    });
+        
+        </script>
 </body>
 
 </html>
