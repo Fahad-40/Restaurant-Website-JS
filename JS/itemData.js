@@ -10,7 +10,7 @@ const menuData = [
                 price: 120,
                 desc: "Hand-cut wagyu, quail egg, capers, dijon mustard, toasted brioche",
                 badge: { text: "Chef's Pick", type: "badge-chef" },
-                img: "Assets/Images/Menu/menu-recipe1.png",
+                img: "Assets/Images/Menu/large size/Starters/1.Wagyu-Beef.png",
                 quantity: 1
             },
             {
@@ -26,7 +26,7 @@ const menuData = [
                 price: 95,
                 desc: "Pan-seared scallops, cauliflower purée, crispy pancetta, herb oil",
                 badge: { text: "Seasonal", type: "badge-chef" },
-                img: "Assets/Images/Menu/Hokkaido-Scallops.png",
+                img: "Assets/Images/Menu/Starters/3.Hokkaido-Scallops.png",
                 quantity: 1
             },
             {
@@ -34,7 +34,7 @@ const menuData = [
                 price: 150,
                 desc: "Osetra caviar served on warm mini pancakes with chive crème fraîche",
                 badge: { text: "Exclusive", type: "badge-chef" },
-                img: "Assets/Images/Menu/Caviar-Blinis.jpg",
+                img: "Assets/Images/Menu/Starters/4.Caviar-Blinis.jpg",
                 quantity: 1
             },
             // Added Item 5
@@ -43,7 +43,7 @@ const menuData = [
                 price: 135,
                 desc: "Silky artisanal duck liver liver served with fig compote and toasted artisan sourdough",
                 badge: { text: "Rare", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Starters/5.Foie-Gras.jpg",
                 quantity: 1
             },
             // Added Item 6
@@ -52,7 +52,7 @@ const menuData = [
                 price: 115,
                 desc: "Ultra-thin sliced premium tuna topped with white truffle oil, capers, and sea salt flakes",
                 badge: { text: "New", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Starters/6.Bluefin-Tuna.jpg",
                 quantity: 1
             },
             // Added Item 7
@@ -61,7 +61,7 @@ const menuData = [
                 price: 80,
                 desc: "Delicate squash blossoms stuffed with fresh herbed ricotta cheese and flash-fried",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Starters/7.Crispy-Zucchini.jpg",
                 quantity: 1
             }
         ]
@@ -78,7 +78,7 @@ const menuData = [
                 price: 110,
                 desc: "Velvety lobster broth, cognac cream, poached lobster chunks",
                 badge: { text: "Signature", type: "badge-chef" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/Black-Garlic.jpg",
                 quantity: 1
             },
             {
@@ -86,7 +86,7 @@ const menuData = [
                 price: 85,
                 desc: "Creamy burrata cheese, seasonal tomatoes, pesto oil, pine nuts",
                 badge: { text: "Elite", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/Salads/Black-Garlic.jpg",
                 quantity: 1
             },
             {
