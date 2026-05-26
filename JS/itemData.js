@@ -267,7 +267,7 @@ quantity: 1
                 price: 35,
                 desc: "Thick-cut potatoes tossed in truffle oil, grated parmesan, fresh parsley",
                 badge: { text: "Classic", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/sides/Parmesan-Truffle.jpg",
                 quantity: 1
             },
             {
@@ -275,7 +275,7 @@ quantity: 1
                 price: 30,
                 desc: "Baby spinach cooked with rich mascarpone cheese and a hint of nutmeg",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/sides/Creamed-Wild.jpg",
                 quantity: 1
             },
             {
@@ -283,7 +283,7 @@ quantity: 1
                 price: 28,
                 desc: "Tender broccolini florets flash-grilled with garlic confit and toasted almonds",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/sides/Charred-Broccolini.jpg",
                 quantity: 1
             },
             {
@@ -291,7 +291,7 @@ quantity: 1
                 price: 55,
                 desc: "Gourmet pasta baked in a five-cheese blend sauce with generous chunks of fresh lobster",
                 badge: { text: "Elite", type: "badge-popular" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/sides/Lobster-Mac-&-Cheese.jpg",
                 quantity: 1
             },
             {
@@ -299,7 +299,7 @@ quantity: 1
                 price: 25,
                 desc: "Baby rainbow carrots roasted with organic honey and fresh thyme sprigs",
                 badge: { text: "Vegetarian", type: "badge-veg" },
-                img: "Assets/Images/Home/recipe2.png",
+                img: "Assets/Images/Menu/sides/Honey-Glazed-Heirloom-Carrots.jpg",
                 quantity: 1
             }
         ]
