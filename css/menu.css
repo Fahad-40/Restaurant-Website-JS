@@ -655,7 +655,7 @@
             width: 140px;
             background: var(--color-surface-high);
             position: relative;
-            height: 200px;
+            height:100%;
         }
         @media (max-width: 500px) {
             .dish-card-img {

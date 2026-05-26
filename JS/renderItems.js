@@ -20,7 +20,7 @@ function RenderItems() {
                             <div class="dish-badges"><span class="badge ${item.badge.type}">${item.badge.text}</span></div>
                         </div>
                         <div class="dish-card-img">
-                            <img alt="Wagyu"
+                            <img alt="${item.name}"
                                 src="${item.img}" />
                             <button class="dish-add-btn"  data-id = "${item.name.toLocaleUpperCase().replace(/ /g, "-")}">+</button>
                         </div>
