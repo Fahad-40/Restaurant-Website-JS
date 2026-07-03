@@ -3,13 +3,12 @@
             padding: 0;
             box-sizing: border-box;
         }
-        /* Base Reset & Variables */
+
         :root {
             --color-bg: #131313;
             --color-surface: #201f1f;
             --color-surface-high: #353534;
             --color-primary: #f1c97d;
-            /* Matches the gold in the screenshot */
             --color-primary-dark: #d4ad65;
             --color-text: #e5e2e1;
             --color-text-muted: #d0c5af;
@@ -17,8 +16,6 @@
             --font-body: 'Manrope', sans-serif;
             --transition: all 0.3s ease;
         }
-
-    
 
         body {
             background-color: var(--color-bg);
@@ -115,7 +112,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 6rem;
+            padding: 1.5rem 4rem;
             background: rgba(19, 19, 19, 0.85);
             /* Slightly darker for better visibility */
             backdrop-filter: blur(10px);
