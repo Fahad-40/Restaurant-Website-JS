@@ -112,12 +112,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 4rem;
             background: rgba(19, 19, 19, 0.85);
             /* Slightly darker for better visibility */
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(241, 201, 125, 0.1);
+            border: 2px solid red;
+            padding: 1.5rem 2rem;
         }
 
         .logo {
